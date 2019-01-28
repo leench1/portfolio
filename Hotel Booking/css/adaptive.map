@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/adaptive.css",
+	"sources": [
+		"../scss/adaptive.scss"
+	],
+	"sourcesContent": [
+		"@mixin respondTo($_media) {\r\n    @if $_media==old_phones {\r\n        @media (max-width: 479px) {\r\n            @content;\r\n        }\r\n    }\r\n\r\n    @else if $_media==mobile {\r\n        @media (min-width: 480px) and (max-width: 767px) {\r\n            @content;\r\n        }\r\n    }\r\n\r\n    @else if $_media==tablets {\r\n        @media (min-width: 768px) and (max-width: 1023px) {\r\n            @content;\r\n        }\r\n    }\r\n\r\n    @else if $_media==small-desktops {\r\n        @media (min-width: 1024px) and (max-width: 1199px) {\r\n            @content;\r\n        }\r\n    }\r\n\r\n    @else if $_media==lg-desktops {\r\n        @media (min-width: 1200px) and (max-width: 1440px) {\r\n            @content;\r\n        }\r\n    }\r\n\r\n    @else if $_media==xlg-desktops {\r\n        @media (min-width: 1441px) and (max-width: 1920px) {\r\n            @content;\r\n        }\r\n    }\r\n}"
+	],
+	"mappings": "",
+	"names": []
+}

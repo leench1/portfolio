@@ -1,0 +1,779 @@
+@import "variables";
+@import "adaptive";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1500px;
+    margin: 0 auto;
+    font-family: $mainFont;
+
+    @include respondTo(lg-desktops) {
+        width: 1150px;
+    }
+
+    @include respondTo(small-desktops) {
+        width: 968px;
+    }
+
+    @include respondTo(tablets) {
+        width: 720px;
+    }
+
+    @include respondTo(mobile) {
+        width: 460px;
+    }
+
+    @include respondTo(old_mobile) {
+        width: auto;
+    }
+}
+
+header {
+    width: inherit;
+    padding: 20px 0;
+}
+
+.logoAndNav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+
+    @include respondTo(mobile) {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+}
+
+.nav {
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px 10px;
+        transition-duration: .5s;
+        border: 1px solid white;
+
+        &:hover {
+            color: #4e26fd;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        @include respondTo(mobile) {
+            display: block;
+        }
+    }
+}
+
+.imgLayer {
+    display: flex;
+    flex-flow: row wrap;
+    width: inherit;
+
+    @media (max-width: 1440px) {
+        justify-content: center;
+        position: relative;
+    }
+
+    .leftImg {
+        height: inherit;
+
+        @media (max-width: 1023px) {
+            width: inherit;
+
+            img {
+                width: inherit;
+            }
+        }
+    }
+
+    .rightImg {
+        display: flex;
+        flex-flow: column wrap;
+
+        @include respondTo(tablets) {
+            flex-flow: column wrap;
+        }
+
+        @include respondTo(mobile) {
+            width: inherit;
+        }
+
+        @include respondTo(old_phones) {
+            flex-flow: row wrap;
+        }
+    }
+}
+
+
+.textImgInside {
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 50px;
+    transform-origin: 0 0;
+    transform: scaley(2);
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+        position: absolute;
+        top: 250px;
+        left: 70px;
+        color: white;
+    }
+
+    @include respondTo(mobile) {
+        font-size: 30px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        line-height: normal;
+    }
+
+    @include respondTo(old_phones) {
+        position: absolute;
+        left: 30px;
+        top: 250px;
+        color: white;
+    }
+
+    .firstLine {
+        color: white;
+        margin-top: -95px;
+        margin-left: 40px;
+        letter-spacing: 5px;
+
+        @include respondTo(mobile) {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    .secondLine {
+        font-stretch: extra-condensed;
+        letter-spacing: 3px;
+        margin-left: 40px;
+        font-size: 50px;
+        font-weight: 800;
+
+        @include respondTo(mobile) {
+            font-size: 20px;
+            color: white;
+            margin-left: 0;
+        }
+    }
+}
+
+.bookNow {
+    height: 102px;
+    width: 1141px;
+    margin: 30px auto;
+    background: #1c1c1c;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 15px solid #4e26fd;
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+        width: inherit;
+        height: 150px;
+    }
+
+    @include respondTo(tablets) {
+        height: 220px;
+        width: 500px;
+    }
+
+    @include respondTo(mobile) {
+        width: 400px;
+        height: 330px;
+    }
+
+    @media (max-width: 480px) {
+        width: inherit;
+    }
+
+    &Form {
+        @media (max-width: 1499px) {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+
+    input {
+        border: 0;
+        padding: 10px;
+        margin-right: 15px;
+        color: black;
+        font-size: 16px;
+        float: left;
+
+        @include respondTo(tablets) {
+            float: none;
+
+            &:nth-child(n+3) {
+                margin-top: 20px;
+            }
+        }
+
+        @include respondTo(mobile) {
+            float: none;
+
+            &:nth-child(n+2) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    button {
+        background: #4e26fd;
+        color: white;
+        padding: 10px;
+        border: 0;
+        border-radius: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-stretch: condensed;
+        transition-duration: .5s;
+
+        &:hover {
+            background: white;
+            color: #4e26fd;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.winningHotels {
+    width: 1141px;
+    margin: 100px auto;
+    color: #010101;
+
+    @include respondTo(small-desktops) {
+        width: 968px;
+    }
+
+    @include respondTo(tablets) {
+        width: 768px;
+    }
+
+    @include respondTo(mobile) {
+        width: 460px;
+    }
+
+    @include respondTo(old_mobile) {
+        width: auto;
+    }
+
+    .hotelsHead {
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .hotelInside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .hotelUnit {
+            max-width: 353px;
+            text-align: center;
+
+            @media (min-width: 1200px) {
+                &:nth-child(-3n+5) {
+                    padding: 0 40px;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1199px) {
+                &:nth-child(even) {
+                    padding: 0 40px;
+                }
+            }
+
+            @include respondTo(tablets) {
+                max-width: 340px;
+            }
+
+            &Head {
+                font-size: 16px;
+                font-weight: 800;
+                margin: 15px 0;
+            }
+
+            &Text {
+                line-height: 20px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.btnMore {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid #4e26fd;
+    color: #4e26fd;
+    padding: 10px 35px;
+    margin: 30px;
+    transition-duration: .5s;
+
+    &:hover {
+        background: #4e26fd;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.2);
+        border-radius: 10px;
+    }
+}
+
+.winterActivities {
+    width: inherit;
+    margin: 0 auto;
+
+    .activitiesHead {
+        margin: 30px;
+        text-align: center;
+        font-size: 80px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-stretch: condensed;
+    }
+
+    .activitiesInside {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+        @media (max-width: 1499px) {
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .activitiesUnit {
+            width: 300px;
+            height: 597px;
+            position: relative;
+
+            @include respondTo(lg-desktops) {
+                &:nth-child(n+4) {
+                    margin-top: 20px;
+                }
+            }
+
+            @include respondTo(small-desktops) {
+                &:nth-child(n+4) {
+                    margin-top: 20px;
+                }
+            }
+
+            @include respondTo(tablets) {
+                &:nth-child(n+3) {
+                    margin-top: 20px;
+                }
+            }
+
+            @include respondTo(mobile) {
+                &:nth-child(n+2) {
+                    margin-top: 20px;
+                }
+            }
+
+            img {
+                height: inherit;
+            }
+
+            &Head {
+                color: white;
+                font-size: 50px;
+                font-weight: 700;
+                font-stretch: extra-condensed;
+                text-transform: uppercase;
+                position: absolute;
+                bottom: 80px;
+                left: 20px;
+            }
+
+            &Text {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                color: white;
+                line-height: 25px;
+            }
+
+            .shadowBox {
+                position: absolute;
+                bottom: 0;
+                height: inherit;
+                width: inherit;
+                box-shadow: inset 0px -150px 195px -10px rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}
+
+.deluxeRooms {
+    width: 1141px;
+    margin: 100px auto;
+    color: #010101;
+    text-align: center;
+
+    @include respondTo(small-desktops) {
+        width: 968px;
+    }
+
+    @include respondTo(tablets) {
+        width: 720px;
+    }
+
+    @include respondTo(mobile) {
+        width: 460px;
+    }
+
+    @include respondTo(old_mobile) {
+        width: auto;
+    }
+
+    &Head {
+        font-size: 80px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        font-stretch: condensed;
+
+    }
+
+    &Inside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 30px 0;
+        line-height: 20px;
+
+        @media (min-width: 480px) and (max-width:1199px) {
+            display: grid;
+            grid-template-areas: "center center"
+                "left right";
+
+            button {
+                grid-column-start: 1;
+                grid-column-end: -1;
+            }
+        }
+
+        .leftPartRoom {
+            display: flex;
+            flex-flow: column wrap;
+            width: 242px;
+
+            @media (min-width: 480px) and (max-width:1199px) {
+                grid-area: left;
+                margin: 0 auto;
+
+            }
+        }
+    }
+
+    .deluxeRoomsUnit {
+
+        &:first-child {
+            margin-bottom: 15px;
+        }
+
+        &Head {
+            font-weight: 700;
+            margin: 15px 0;
+        }
+    }
+
+    .centerPartRoom {
+        display: flex;
+        flex-flow: column wrap;
+        width: 579px;
+        margin: 0 35px;
+
+        @media (min-width: 480px) and (max-width:1199px) {
+            grid-area: center;
+
+        }
+    }
+
+    .rightPartRoom {
+        display: flex;
+        flex-flow: column wrap;
+        width: 242px;
+
+        @media (min-width: 480px) and (max-width:1199px) {
+            grid-area: right;
+            margin: 0 auto
+        }
+    }
+}
+
+.winterWeather {
+    height: 554px;
+    width: inherit;
+    background: url(../img/winter_weather.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    .winterWeatherInside {
+        margin-right: 200px;
+        margin-top: 100px;
+        width: 600px;
+
+        @media (max-width: 1440px) {
+            margin-right: 20px;
+        }
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        &Head {
+            color: white;
+            font-size: 130px;
+            text-transform: uppercase;
+            font-stretch: extra-condensed;
+            font-weight: 700;
+            line-height: 100px;
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: 70px;
+            }
+        }
+
+        &Text {
+            clear: both;
+            color: white;
+            line-height: 30px;
+            padding: 30px 0;
+
+        }
+
+        .btnMoreWinter {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            background: #4e26fd;
+            border: 0;
+            color: white;
+            padding: 10px 55px;
+            margin: 30px;
+            transition-duration: .5s;
+
+            &:hover {
+                background: #4e26fd;
+                color: white;
+                cursor: pointer;
+                transform: scale(1.2);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.news {
+    width: 1141px;
+    margin: 100px auto;
+    text-align: center;
+
+    @include respondTo(small-desktops) {
+        width: 968px;
+    }
+
+    @include respondTo(tablets) {
+        width: 720px;
+    }
+
+    @include respondTo(mobile) {
+        width: 460px;
+    }
+
+    @include respondTo(old_mobile) {
+        width: auto;
+    }
+
+    &Head {
+        font-size: 112px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-stretch: condensed;
+        text-align: center;
+    }
+
+    &Inside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 50px 0;
+
+        &Unit {
+            display: flex;
+            flex-flow: column wrap;
+            max-width: 353px;
+
+            &:nth-child(2) {
+                padding: 0 35px;
+            }
+
+            &Head {
+                font-weight: 700;
+                margin: 15px 0;
+            }
+
+            &Text {
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+footer {
+    .footerInside {
+        height: 311px;
+        background: #252525;
+        color: white;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 0 100px;
+        align-items: center;
+
+        @include respondTo(small-desktops) {
+            padding: 0 30px;
+        }
+
+        @include respondTo(mobile) {
+            flex-flow: column nowrap;
+            height: auto;
+        }
+
+        .leftPartFooter {
+            .contacts {
+                margin: 15px 0;
+
+                .adress {
+                    background: url(../img/geo.png) no-repeat left center;
+                    padding-left: 25px;
+                }
+
+                .phoneNumber {
+                    background: url(../img/phone.png) no-repeat left center;
+                    padding-left: 25px;
+                    margin: 10px 0;
+                }
+
+                .email {
+                    background: url(../img/mail.png) no-repeat left center;
+                    padding-left: 25px;
+                    margin-left: -3px;
+                }
+            }
+        }
+
+        .centerPartFooter {
+            height: 180px;
+            width: 35%;
+
+            @include respondTo(small-desktops) {
+                width: 40%;
+            }
+
+            @include respondTo(mobile) {
+                width: 100%;
+                height: 220px;
+            }
+
+            .footerLink {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+                height: inherit;
+
+                @include respondTo(tablets) {
+                    height: 250px;
+                    justify-content: flex-start;
+                }
+
+                @include respondTo(mobile) {
+                    flex-flow: row wrap;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 20px;
+                    transition-duration: .5s;
+
+                    &:hover {
+                        color: #4e26fd;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .rightPartFooter {
+
+            .socialIcons {
+
+                .fab {
+                    font-size: 20px;
+                    padding: 10px;
+                    border: 1px solid white;
+                    transition-duration: .3s;
+
+                    &:nth-child(n+3) {
+                        margin-left: 20px;
+                    }
+
+                    &:hover {
+                        color: #4e26fd;
+                        border: 1px solid #4e26fd;
+                        cursor: pointer;
+                    }
+                }
+
+                .fa-facebook-f {
+                    padding: 10px 15px;
+                }
+
+                &Head {
+                    text-transform: uppercase;
+                    margin: 20px 0;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .copyRight {
+        background: #252525;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+}

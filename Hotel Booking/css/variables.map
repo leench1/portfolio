@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/variables.css",
+	"sources": [
+		"../scss/variables.scss"
+	],
+	"sourcesContent": [
+		"@font-face {\r\n    font-family: \"OpenSans-Regular\", sans-serif;\r\n    src: url(../fonts/OpenSans-Regular-ttf);\r\n}\r\n\r\n$mainFont: \"OpenSans-Regular\",\r\nsans-serif;\r\n$textColor : #010101;\r\n"
+	],
+	"mappings": "AAAA,UAAU;EACN,WAAW,EAAE,8BAA+B;EAC5C,GAAG,EAAmC,kCAAC",
+	"names": []
+}
