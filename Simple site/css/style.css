@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: SocialIco;
+    src: url(../fonts/Socialico.ttf);
+}
+
+.content {
+    width: 1280px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 323px;
+    background-color: #445161;
+    color: white;
+    padding: 30px;
+}
+
+header .textHeader h1 {
+    padding: 20px;
+    float: left;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+header .textHeader ul {
+    margin-left: 20px;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    clear: both;
+}
+
+header img {
+    float: right;
+    margin-right: 20px;
+    margin-top: -60px;
+}
+
+/* media header*/
+@media (max-width: 1200px) {
+
+    header {
+        width: 1140px;
+    }
+
+    .content {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        width: 960px;
+    }
+
+    header {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    header .textHeader h1 {
+        font-size: 50px;
+    }
+
+    header .textHeader ul {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 720px;
+    }
+
+    header {
+
+        width: 720px;
+        height: 460px;
+    }
+
+    .textHeader {
+        width: 54%;
+        margin: 0 auto;
+    }
+
+    header .textHeader h1 {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    header .textHeader ul {
+        margin: 0;
+    }
+
+    header img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+main {
+    padding: 30px;
+}
+
+.characteristic {
+    padding-left: 30px;
+    padding-top: 15px;
+    list-style-image: url(../img/check_icon.png);
+}
+
+.aboutProduct {
+    height: 333px;
+}
+
+.aboutHeader {
+    float: left;
+    padding: 20px 0 0 50px;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.leftPart {
+    clear: both;
+    float: left;
+    padding: 30px;
+    width: 50%;
+}
+
+.firstParagraph {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.secondParagraph {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.rightPart img {
+    float: right;
+    margin-top: -20px;
+    margin-right: 50px;
+}
+
+/* media about*/
+@media (max-width: 1200px) {
+    .aboutProduct {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutProduct {
+        width: 960px;
+    }
+
+    .leftPart {
+        width: 45%;
+    }
+
+    .rightPart img {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutProduct {
+        width: 720px;
+        height: 550px;
+    }
+
+    .aboutHeader {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .leftPart {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .rightPart img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.dignity {
+
+    background-color: #f5f5f5;
+    color: #333333;
+    height: 430px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.dignity::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.dignityHeader {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #445161;
+    padding: 50px 0 50px 0;
+}
+
+.leftParagraph {
+    width: 48%;
+    float: left;
+    padding-left: 40px;
+}
+
+.paragraph {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.paragraph:nth-child(even) {
+    padding-bottom: 15px;
+}
+
+.paragraph:nth-child(odd) {
+    padding-bottom: 15px;
+}
+
+.paragraph::before {
+    content: url(../img/plus.png);
+    display: block;
+    height: 60px;
+    margin-left: -20px;
+    margin-right: 8px;
+    margin-top: 5px;
+    float: left;
+}
+
+.rightParagraph {
+    width: 48%;
+    padding-left: 8px;
+    float: left;
+}
+
+.paragraph::before {
+    height: 80px;
+}
+
+/* media dignity*/
+@media (max-width: 1200px) {
+
+    .dignity {
+        width: 1140px;
+        height: 485px;
+    }
+
+    .dignityParagraph {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .leftParagraph {
+        width: 45%
+    }
+
+    .rightParagraph {
+        width: 45%;
+    }
+
+    .paragraph::before {
+        height: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .dignity {
+        width: 960px;
+        height: 665px;
+    }
+
+    .paragraph {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .paragraph::before {
+        height: 45px;
+    }
+
+    .leftParagraph {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .rightParagraph {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dignity {
+        width: 720px;
+    }
+
+    .paragraph::before {
+        height: 45px;
+    }
+}
+
+
+
+.screenShots::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.screenHeader {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #445161;
+    padding: 50px 0 50px 0;
+}
+
+.screenUnit {
+    width: 48%;
+}
+
+.screenUnit:nth-child(1n) {
+    float: left;
+    margin: 10px 10px 20px 10px;
+}
+
+.screenImg {
+    float: left;
+    margin-right: 10px;
+}
+
+.headerUnit {
+    color: #445161;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.textScreen {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+}
+
+/*media screen*/
+@media (max-width: 1200px) {
+    .screenShots {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .screenShots {
+        width: 960px;
+    }
+
+    .screenUnit {
+        width: 95%;
+        padding-left: 30px;
+    }
+
+    .textScreen {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .screenShots {
+        width: 720px;
+    }
+}
+
+.reviews {
+    background-color: #f5f5f5;
+    height: 350px;
+}
+
+.reviewUnit {
+    width: 48%;
+}
+
+.reviewUnit:nth-child(1n) {
+    float: left;
+    margin: 10px 10px 20px 10px;
+
+}
+
+.reviewHeader {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #445161;
+    padding: 50px 0 50px 0;
+}
+
+.reviewImg {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.reviewText {
+    position: relative;
+    background-color: #ebebeb;
+    color: #333333;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+}
+
+.reviewText::before {
+    position: absolute;
+    top: 27px;
+    left: -10px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #ebebeb;
+    transform: rotate(45deg);
+
+}
+
+.reviewAuthor {
+    background-color: #ebebeb;
+    margin-left: 100px;
+    padding-left: 20px;
+    color: #989898;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    font-style: italic;
+}
+
+/*media review*/
+
+@media (max-width: 1200px) {
+    .reviews {
+        width: 1140px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        width: 960px;
+        height: 530px;
+    }
+
+    .reviewUnit {
+        width: 90%;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        width: 720px;
+        height: 560px;
+    }
+}
+
+
+.buyHeader {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #445161;
+    padding: 50px 0 50px 0;
+}
+
+.buyCenter {
+    width: 990px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.buyUnit {
+    border: 2px solid #455062;
+    border-radius: 5px;
+    background-color: #455062;
+
+}
+
+.buyUnit h2 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.priceUnit {
+    background-color: white;
+    padding: 18px;
+    text-align: center;
+    color: #455062;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.textUnit {
+    padding: 18px;
+    background-color: #455062;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.buyBtn {
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px;
+    background: #ffffff;
+    color: #445161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/*media buy*/
+
+@media (max-width: 1200px) {
+    .buyIt {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .buyIt {
+        width: 960px;
+    }
+
+    .buyCenter {
+        width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .buyIt {
+        width: 720px;
+    }
+
+
+    .buyCenter {
+        flex-direction: row;
+        width: 720px;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0;
+    }
+
+    .buyUnit {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .buyCenter {
+        display: block;
+    }
+}
+
+footer {
+    padding: 30px;
+    height: 510px;
+    background-color: #445161;
+    color: white;
+}
+
+.footerHeader {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    padding: 50px 0 50px 0;
+}
+
+.footerCentr .messege {
+    width: 500px;
+    margin-left: 9%;
+}
+
+.messege [type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 5px;
+    text-indent: 20px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.messege [id="yourMessage"] {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 5px;
+    text-indent: 20px;
+    padding-top: 10px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.messege [type="submit"] {
+    border: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 140px;
+    height: 40px;
+    display: block;
+    color: #445162;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+}
+
+.footerCentr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footerCentr form {
+    float: left;
+}
+
+.socialContacts {
+    float: right;
+    width: 33%;
+}
+
+.skype {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    background: url(../img/skype_icon.png) no-repeat left center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.icq {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    background: url(../img/icq_icon.png) no-repeat left center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.email {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    background: url(../img/email_icon.png) no-repeat left center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.phoneNumber {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    background: url(../img/phone_icon.png) no-repeat left center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.socialIcons {
+    font-family: Socialico,sans-serif;
+    clear: right;
+    font-size: 60px;
+}
+
+/*media footer*/
+
+@media (max-width: 1200px) {
+    footer {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    footer {
+        width: 960px;
+    }
+
+    .footerCentr .messege {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        width: 720px;
+    }
+
+    .footerCentr .messege {
+        width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    footer {
+        height: 700px;
+    }
+
+    .footerCentr .messege {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .socialContacts {
+        float: none;
+        clear: both;
+    }
+    
+}
+
+.copyright {
+    text-align: center;
+    color: #445162;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+}
