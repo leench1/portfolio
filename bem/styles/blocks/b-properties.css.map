@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EAErC,mBAAQ;IACJ,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;IACtB,UAAU,EAAE,MAAM;EAGtB,kBAAO;IACH,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI;IAEX,yBAAS;MACL,MAAM,EAAE,MAAM",
+"sources": ["b-properties.scss"],
+"names": [],
+"file": "b-properties.css"
+}

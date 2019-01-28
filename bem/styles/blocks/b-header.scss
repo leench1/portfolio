@@ -1,0 +1,7 @@
+.b-header {
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}

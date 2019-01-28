@@ -1,0 +1,26 @@
+.b-mainNav {
+    background: #81b300;
+    display: flex;
+    justify-content: space-between;
+
+    &_padding {
+        padding: 25px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: $mainFont;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: white;
+        transition-duration: .5s;
+
+        &:hover {
+            color: #444;
+        }
+
+        &_ident {
+            padding: 0 15px;
+        }
+    }
+}

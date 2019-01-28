@@ -1,0 +1,13 @@
+.b-divCopyRight {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #2e2e2e;
+    font-family: $mainFont;
+    color: #737373;
+    font-size: 13px;
+
+    &_ident {
+        padding: 20px 35px;
+    }
+}

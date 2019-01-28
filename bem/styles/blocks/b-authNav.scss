@@ -1,0 +1,31 @@
+.b-authNav {
+    &__item {
+        color: #81b300;
+        font-size: 12px;
+        font-family: $mainFont;
+        text-decoration: none;
+
+        &:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        &_ident {
+            border-right: 2px solid black;
+            padding: 0 10px;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+
+    &_right {
+        float: right;
+        clear: right;
+    }
+
+    &_ident {
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,18 @@
+.b-social {
+  background: #81b300;
+  border-radius: 0 0 20px 20px; }
+  .b-social__icon {
+    font-size: 40px;
+    transition-duration: .5s; }
+    .b-social__icon:hover {
+      color: #17d4f1;
+      cursor: pointer; }
+    .b-social__icon_ident {
+      padding: 10px;
+      border: 0; }
+  .b-social_right {
+    float: right; }
+  .b-social_ident {
+    margin: 0 15px 15px 0; }
+
+/*# sourceMappingURL=b-social.css.map */

@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: "Georgia Regular";
+    src: url(../../fonts/Georgia_Regular.ttf);
+}
+
+$mainFont: "Georgia Regular",
+sans-serif;
+
+@import "blocks/b-logo";
+@import "blocks/b-authNav";
+@import "blocks/b-social";
+@import "blocks/b-header";
+@import "blocks/b-mainNav";
+@import "blocks/b-searchForm";
+@import "blocks/b-sliderWrap";
+@import "blocks/b-properties";
+@import "blocks/b-line";
+@import "blocks/b-projectGallery";
+@import "blocks/b-footer";
+@import "blocks/b-divCopyRight";
+
+body {
+    line-height: 1.6;
+    background: #1f1f1f;
+}
+
+.container {
+    background: white;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.b-headerLine {
+    height: 5px;
+    background: #81b300;
+}
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel ul {
+    width: 10000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}

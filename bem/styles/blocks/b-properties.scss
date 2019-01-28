@@ -1,0 +1,39 @@
+.b-properties {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &_ident {
+        padding: 50px 30px;
+        grid-gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        font-family: $mainFont;
+    }
+
+    &__img {
+        height: auto;
+        width: auto;
+
+        &_center {
+            margin: 0 auto;
+        }
+    }
+
+    &__head {
+        font-size: 18px;
+        text-align: center;
+        color: #81b300;
+
+        &_margin {
+            margin: 15px 0;
+        }
+    }
+
+    &__desc {
+        color: #888888;
+        text-align: justify;
+    }
+}

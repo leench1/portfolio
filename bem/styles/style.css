@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: "Georgia Regular";
+  src: url(../../fonts/Georgia_Regular.ttf); }
+.b-logo__item1 {
+  font-family: "Georgia Regular", sans-serif;
+  font-size: 46px;
+  color: #333333; }
+.b-logo__item2 {
+  font-family: "Georgia Regular", sans-serif;
+  font-size: 12px;
+  color: #999999; }
+.b-logo_indent {
+  margin: 15px 0 15px 50px; }
+.b-logo_left {
+  float: left; }
+
+.b-authNav__item {
+  color: #81b300;
+  font-size: 12px;
+  font-family: "Georgia Regular", sans-serif;
+  text-decoration: none; }
+  .b-authNav__item:hover {
+    color: black;
+    cursor: pointer; }
+  .b-authNav__item_ident {
+    border-right: 2px solid black;
+    padding: 0 10px; }
+    .b-authNav__item_ident:last-child {
+      border: 0; }
+.b-authNav_right {
+  float: right;
+  clear: right; }
+.b-authNav_ident {
+  margin-right: 15px; }
+
+.b-social {
+  background: #81b300;
+  border-radius: 0 0 20px 20px; }
+  .b-social__icon {
+    font-size: 40px;
+    transition-duration: .5s; }
+    .b-social__icon:hover {
+      color: #17d4f1;
+      cursor: pointer; }
+    .b-social__icon_ident {
+      padding: 10px;
+      border: 0; }
+  .b-social_right {
+    float: right; }
+  .b-social_ident {
+    margin: 0 15px 15px 0; }
+
+.b-header::after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.b-mainNav {
+  background: #81b300;
+  display: flex;
+  justify-content: space-between; }
+  .b-mainNav_padding {
+    padding: 25px; }
+  .b-mainNav__link {
+    text-decoration: none;
+    font-family: "Georgia Regular", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    transition-duration: .5s; }
+    .b-mainNav__link:hover {
+      color: #444; }
+    .b-mainNav__link_ident {
+      padding: 0 15px; }
+
+.b-searchForm {
+  height: 30px; }
+  .b-searchForm__item {
+    height: inherit;
+    border: 0;
+    color: #999999;
+    padding: 0 10px; }
+    .b-searchForm__item_left {
+      float: left; }
+  .b-searchForm__btn {
+    border: 0;
+    border-left: 1px solid black;
+    background: white;
+    height: inherit;
+    color: #81b300;
+    font-family: "Georgia Regular", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 0 5px;
+    transition-duration: .5s; }
+    .b-searchForm__btn:hover {
+      cursor: pointer;
+      color: aliceblue;
+      background: #666; }
+
+.b-sliderWrap {
+  background: #f2f2f2;
+  padding: 30px 0 5px 0; }
+
+.b-properties {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  .b-properties_ident {
+    padding: 50px 30px;
+    grid-gap: 20px; }
+  .b-properties__item {
+    display: flex;
+    flex-direction: column;
+    font-family: "Georgia Regular", sans-serif; }
+  .b-properties__img {
+    height: auto;
+    width: auto; }
+    .b-properties__img_center {
+      margin: 0 auto; }
+  .b-properties__head {
+    font-size: 18px;
+    text-align: center;
+    color: #81b300; }
+    .b-properties__head_margin {
+      margin: 15px 0; }
+  .b-properties__desc {
+    color: #888888;
+    text-align: justify; }
+
+.b-line {
+  height: 3px;
+  background: #e2e2e2; }
+  .b-line_leftRightMargin {
+    margin: 0 30px; }
+
+.b-projectGallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  .b-projectGallery_ident {
+    grid-gap: 20px;
+    padding: 50px 30px; }
+  .b-projectGallery__item {
+    display: flex;
+    flex-direction: column;
+    font-family: "Georgia Regular", sans-serif; }
+  .b-projectGallery__img {
+    height: 130px;
+    width: 200px; }
+    .b-projectGallery__img_center {
+      text-align: left; }
+    .b-projectGallery__img_border {
+      padding: 5px;
+      border: 1px solid #e2e2e2; }
+  .b-projectGallery__title {
+    color: #444444;
+    font-size: 14px;
+    text-align: left; }
+    .b-projectGallery__title_ident {
+      margin: 20px 0; }
+  .b-projectGallery__desc {
+    color: #878787;
+    font-size: 13px; }
+    .b-projectGallery__desc_ident {
+      margin-bottom: 15px; }
+  .b-projectGallery__details {
+    text-decoration: none;
+    color: #81b300;
+    font-size: 13px;
+    text-align: right;
+    transition-duration: .5s; }
+    .b-projectGallery__details:hover {
+      text-decoration: underline;
+      color: black; }
+
+.b-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #3b3b3b;
+  font-family: "Georgia Regular", sans-serif; }
+  .b-footer__item {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #999; }
+    .b-footer__item_ident {
+      padding: 20px 35px; }
+  .b-footer__head {
+    color: #666;
+    text-transform: uppercase; }
+    .b-footer__head_ident {
+      padding: 15px 0; }
+  .b-footer__desc_ident {
+    margin-bottom: 15px; }
+  .b-footer__link {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    transition-duration: .5s; }
+    .b-footer__link:hover {
+      color: aliceblue; }
+    .b-footer__link_border {
+      border-bottom: 1px solid #999;
+      margin-bottom: 15px; }
+  .b-footer__title {
+    font-weight: bold; }
+    .b-footer__title_ident {
+      margin-bottom: 5px; }
+  .b-footer__btnMore {
+    text-decoration: none;
+    color: #81b300;
+    text-align: right;
+    transition-duration: 1s; }
+    .b-footer__btnMore:hover {
+      color: antiquewhite; }
+  .b-footer__input {
+    background: #1f1f1f;
+    color: aliceblue;
+    height: 31px; }
+    .b-footer__input_border {
+      padding-left: 10px;
+      border: 0;
+      border-radius: 5px;
+      margin: 5px 0; }
+  .b-footer__formBtn {
+    background: #1f1f1f;
+    color: #81b300;
+    text-transform: uppercase;
+    transition-duration: .5s; }
+    .b-footer__formBtn:hover {
+      cursor: pointer;
+      color: aliceblue;
+      background: #81b300; }
+    .b-footer__formBtn_border {
+      border: 0;
+      border-radius: 5px;
+      padding: 10px 15px; }
+
+.b-divCopyRight {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background: #2e2e2e;
+  font-family: "Georgia Regular", sans-serif;
+  color: #737373;
+  font-size: 13px; }
+  .b-divCopyRight_ident {
+    padding: 20px 35px; }
+
+body {
+  line-height: 1.6;
+  background: #1f1f1f; }
+
+.container {
+  background: white;
+  width: 70%;
+  margin: 20px auto; }
+
+.b-headerLine {
+  height: 5px;
+  background: #81b300; }
+
+.jcarousel {
+  position: relative;
+  overflow: hidden; }
+
+.jcarousel ul {
+  width: 10000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.jcarousel li {
+  float: left; }
+
+/*# sourceMappingURL=style.css.map */

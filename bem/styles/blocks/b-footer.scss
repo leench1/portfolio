@@ -1,0 +1,100 @@
+.b-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #3b3b3b;
+    font-family: $mainFont;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        color: #999;
+
+        &_ident {
+            padding: 20px 35px;
+        }
+    }
+
+    &__head {
+        color: #666;
+        text-transform: uppercase;
+
+        &_ident {
+            padding: 15px 0;
+        }
+    }
+
+    &__desc {
+
+        &_ident {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #999;
+        transition-duration: .5s;
+
+        &:hover {
+            color: aliceblue;
+        }
+
+        &_border {
+            border-bottom: 1px solid #999;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+
+        &_ident {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__btnMore {
+        text-decoration: none;
+        color: #81b300;
+        text-align: right;
+        transition-duration: 1s;
+
+        &:hover {
+            color: antiquewhite;
+        }
+    }
+
+    &__input {
+        background: #1f1f1f;
+        color: aliceblue;
+        height: 31px;
+
+        &_border {
+            padding-left: 10px;
+            border: 0;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    }
+
+    &__formBtn {
+        background: #1f1f1f;
+        color: #81b300;
+        text-transform: uppercase;
+        transition-duration: .5s;
+
+        &:hover {
+            cursor: pointer;
+            color: aliceblue;
+            background: #81b300;
+        }
+
+        &_border {
+            border: 0;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+    }
+}

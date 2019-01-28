@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,YAAY",
+"sources": ["b-sliderWrap.scss"],
+"names": [],
+"file": "b-sliderWrap.css"
+}

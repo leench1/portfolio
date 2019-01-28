@@ -1,0 +1,27 @@
+.b-social {
+    background: #81b300;
+    border-radius: 0 0 20px 20px;
+
+    &__icon {
+        font-size: 40px;
+        transition-duration: .5s;
+
+        &:hover {
+            color: #17d4f1;
+            cursor: pointer;
+        }
+
+        &_ident {
+            padding: 10px;
+            border: 0;
+        }
+    }
+
+    &_right {
+        float: right;
+    }
+
+    &_ident {
+        margin: 0 15px 15px 0;
+    }
+}
