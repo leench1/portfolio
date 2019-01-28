@@ -1,0 +1,893 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(../fonts/OpenSans-Bold.ttf)
+}
+
+@font-face {
+    font-family: SocialIco;
+    src: url(../fonts/Socialico.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+header {
+    padding: 50px;
+}
+
+.headerRow {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    grid-template-areas:
+        "headerLogo workTime mailUs callUs";
+}
+
+.headerLogo {
+    grid-area: headerLogo;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.workTime {
+    background: url(../img/clock.svg) no-repeat left center;
+    background-size: contain;
+    padding-left: 50px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #6a6a6a;
+    grid-area: workTime;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+.mailUs {
+    background: url(../img/email.svg) no-repeat left center;
+    background-size: contain;
+    padding-left: 50px;
+    grid-area: mailUs;
+    font-size: 15px;
+    line-height: 22px;
+    color: #6a6a6a;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+.callUs {
+    background: url(../img/smartphone.svg) no-repeat left center;
+    background-size: contain;
+    padding-left: 50px;
+    grid-area: callUs;
+    font-size: 15px;
+    line-height: 22px;
+    color: #6a6a6a;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 15px;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 20px;
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #262626;
+    text-shadow: #262626 1px 1px;
+}
+
+.facebook {
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/facebook-letter-logo.svg);
+    background-size: contain;
+
+}
+
+.googlePlus {
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/google-plus-logo.svg);
+    background-size: contain;
+}
+
+.vk {
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/vk-social-logotype.svg);
+    background-size: contain;
+}
+
+.youTube {
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/youtube-logo.svg);
+    background-size: contain;
+
+}
+
+.linkId {
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/linkedin-logo.svg);
+    background-size: contain;
+}
+
+.medicalImg {
+    width: 100%;
+    height: 640px;
+    background: url(../img/background_header.png) no-repeat center center;
+    background-size: cover;
+
+}
+
+.medicalPlanInside {
+    width: 80%;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.medicalContent {
+    text-align: center;
+}
+
+.medicalContent button {
+    padding: 20px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #1a9bdc;
+    color: white;
+    text-transform: uppercase;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 17px;
+}
+
+.medicalContent button:hover {
+    background-color: #2f788e;
+    cursor: pointer;
+    box-shadow: -4px 11px 40px 0px rgba(0, 1, 1, 0.2);
+}
+
+.medicalHeader {
+    font-family: "Montserrat Medium", sans-serif;
+    font-size: 47.69px;
+    color: #474747;
+}
+
+.medicalText {
+    margin: 30px;
+    font-family: OpenSans-Regular, sans-serif;
+    color: #3f3f3f;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.medicalSpec {
+    color: white;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to right, #43b1d2, #37c3a8);
+}
+
+.specGrid {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+.specUnit {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.specImg {
+    text-align: center;
+}
+
+.specImg img {
+    width: 75px;
+    height: 75px;
+}
+
+.unitHeader {
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.unitText {
+    font-family: OpenSans-Regular, sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.whyChoose {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.whyChooseGrid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 337px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.whyChooseUnit {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.whyChooseHeader {
+    margin-top: 100px;
+    font-family: "Montserrat Bold", sans-serif;
+    color: #494949;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.whyChooseText {
+    width: 65%;
+    margin: 30px auto;
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.whyUnitHeader {
+    font-family: "Montserrat Bold", sans-serif;
+    color: #6f6f6e;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 75px;
+    padding-left: 100px;
+}
+
+.choose1 {
+    background: url(../img/why_choose1.png) no-repeat left center;
+}
+
+.choose2 {
+    background: url(../img/why_choose2.png) no-repeat left center;
+}
+
+.choose3 {
+    background: url(../img/why_choose3.png) no-repeat left center;
+}
+
+.choose4 {
+    background: url(../img/why_choose4.png) no-repeat left center;
+}
+
+.whyUnitText {
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.whyChooseImg {
+    height: 598px;
+    background: url(../img/choose_doctor.png) no-repeat center bottom;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.achievements {
+    width: 100%;
+    height: 592px;
+    background: url(../img/SVC1-Urgent-Care.jpg) no-repeat;
+    background-size: cover;
+    background-color: #1a9bdc;
+    background-blend-mode: color-burn;
+}
+
+.img1 {
+    width: 90px;
+    height: 90px;
+    background: url(../img/achievement1.png) no-repeat center center;
+    background-size: contain;
+}
+
+.img2 {
+    width: 90px;
+    height: 90px;
+    background: url(../img/achievement2.png) no-repeat center center;
+    background-size: contain;
+}
+
+.img3 {
+    width: 90px;
+    height: 90px;
+    background: url(../img/achievement3.png) no-repeat center center;
+    background-size: contain;
+
+}
+
+.img4 {
+    width: 90px;
+    height: 90px;
+    background: url(../img/achievement4.png) no-repeat center center;
+    background-size: contain;
+}
+
+
+.achievementsGrid {
+    height: inherit;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+}
+
+.achievementUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Montserrat Medium", sans-serif;
+}
+
+.achievementDigit {
+    font-size: 60px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.achivementsHr {
+    width: 90px;
+    border-bottom: 4px solid white;
+}
+
+.achievementText {
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.workCreative {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.workCreativeGrid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-template-areas:
+        "workHeader workHeader cretiveHeader"
+        "workText   workText   creativeText"
+        "workImgLeft workImgRight  heartTreatmentUnit"
+        "workDataLeft workDataRight heartPoint"
+        "button button ."
+}
+
+.workCreativeGrid button {
+    grid-area: button;
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #1a9bdc;
+    color: white;
+    text-transform: uppercase;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 17px;
+}
+
+.workCreativeGrid button:hover {
+    background-color: #2f788e;
+    cursor: pointer;
+    box-shadow: -4px 11px 40px 0px rgba(0, 1, 1, 0.2);
+}
+
+.workHeader {
+    grid-area: workHeader;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 45px;
+    color: #494949;
+}
+
+.workText {
+    grid-area: workText;
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.workImg1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.workImgLeft {
+    width: 334px;
+    height: 210px;
+    grid-area: workImgLeft;
+    background: url(../img/work_img1.jpg);
+}
+
+.workImgHeader {
+    grid-area: workImgHeader;
+    font-family: "Montserrat Medium", sans-serif;
+    color: #6f6f6e;
+    font-size: 20px;
+}
+
+.workImgRight {
+    width: 334px;
+    height: 210px;
+    grid-area: workImgRight;
+    background-image: url(../img/work_img2.jpg);
+}
+
+.workDataLeft {
+    grid-area: workDataLeft;
+}
+
+.workDataRight {
+    grid-area: workDataRight;
+}
+
+
+.cretiveHeader {
+    grid-area: cretiveHeader;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 45px;
+    color: #494949;
+}
+
+.creativeText {
+    grid-area: creativeText;
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.heartTreatmentHead {
+    background: url(../img/heartPoint.png) no-repeat left 15px center;
+    background-size: 45px;
+    padding-left: 90px;
+    grid-area: heartTreatmentHead;
+    background-color: #0087be;
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    font-family: "Montserrat Medium", sans-serif;
+    font-size: 20px;
+    line-height: 55px;
+}
+
+.heartPoint {
+    grid-area: heartPoint;
+    display: flex;
+    flex-direction: column;
+}
+
+.heartTreatment {
+    background: url(../img/heartPoint.png) no-repeat left 15px center;
+    background-size: 45px;
+    padding-left: 90px;
+    grid-area: heartTreatmentHead;
+    background-color: #e2e2e2;
+    border: 0;
+    border-radius: 50px;
+    color: #494949;
+    font-family: "Montserrat Medium", sans-serif;
+    font-size: 20px;
+    line-height: 55px;
+}
+
+.heartTreatment:nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.workImgData {
+    font-family: "Montserrat Medium", sans-serif;
+    color: #0087be;
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.workImgText {
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.gallery {
+    width: 100%;
+    height: 730px;
+    background: url(../img/Gallery.jpg) no-repeat center center;
+    background-size: cover;
+    background-color: #1eb99b;
+    background-blend-mode: soft-light;
+}
+
+.galleryHeader {
+    text-align: center;
+    font-family: "Montserrat Bold", sans-serif;
+    color: #ffffff;
+    font-size: 45px;
+    padding-top: 50px;
+}
+
+.galleryText {
+    width: 80%;
+    margin: 0 auto;
+    font-family: OpenSans-Regular, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.galleryImg {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.galleryImg img {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1.5);
+}
+
+.teamHeader {
+    font-family: "Montserrat Bold", sans-serif;
+    color: #494949;
+    font-size: 45px;
+    text-align: center;
+}
+
+.ourTeam {
+    padding: 50px 0;
+}
+
+.teamText {
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6a6a6a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.teamGrid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.doctorImg {
+    text-align: center;
+}
+
+.doctorImg img {
+    width: 249px;
+    height: 249px;
+}
+
+.nameDoctor {
+    font-family: "Montserrat Medium", sans-serif;
+    color: #6f6f6e;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.positionDoctor {
+    font-family: "Montserrat Medium", sans-serif;
+    color: #6f6f6e;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.socialDoctor {
+    width: 110px;
+    margin: 0 auto;
+}
+
+.consultation {
+    width: 100%;
+    height: 180px;
+    background-color: #e2e2e2;
+}
+
+.textConsultation {
+    width: 65%;
+    text-align: right;
+    padding: 80px 0;
+    margin-right: 150px;
+    float: left;
+    font-family: "Montserrat Bold", sans-serif;
+    color: #494949;
+    font-size: 30px;
+}
+
+.consultation button {
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 17px;
+    margin: 70px 0;
+    padding: 20px 40px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #1a9bdc;
+    color: white;
+    text-transform: uppercase;
+}
+
+.consultation button:hover {
+    background-color: #2f788e;
+    cursor: pointer;
+    box-shadow: -4px 11px 40px 0px rgba(0, 1, 1, 0.2);
+}
+
+/*style footer */
+footer {
+    width: 100%;
+    height: 751px;
+    background-color: #171717;
+}
+
+.footerGrid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 100px 0;
+    grid-template-areas:
+        "getInTouch quickLink ourServices enquiryForm"
+}
+
+.gridHeader {
+    color: white;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 50px 0;
+}
+
+.getInTouch {
+    grid-area: getInTouch;
+    justify-self: center;
+
+    font-family: OpenSans-Regular, sans-serif;
+    color: #6c6c6c;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.email {
+    background: url(../img/footer_mail.png) no-repeat left center;
+    padding-left: 60px;
+}
+
+.touchPhone {
+    background: url(../img/foote_phone.png) no-repeat left center;
+    padding-left: 60px;
+    margin: 55px 0;
+}
+
+.adress {
+    background: url(../img/footer_adress.png) no-repeat left center;
+    padding-left: 60px;
+}
+
+.quickLinks {
+    grid-area: quickLink;
+    justify-self: center;
+}
+
+.quickLink li a {
+    font-family: OpenSans-Regular, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6c6c6c;
+    line-height: 30px;
+}
+
+.quickLink li {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.quickLink li::before {
+    content: '\25ba';
+    padding-right: 15px;
+    color: #0087be;
+}
+
+.quickLink li a:hover {
+    color: white;
+}
+
+.ourServices {
+    grid-area: ourServices;
+    justify-self: center;
+}
+
+.listServices li a {
+    font-family: OpenSans-Regular, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6c6c6c;
+    line-height: 30px;
+}
+
+.listServices li {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.listServices li::before {
+    content: '\25ba';
+    padding-right: 15px;
+    color: #0087be;
+}
+
+.listServices li a:hover {
+    color: white;
+}
+
+.enquiryForm {
+    grid-area: enquiryForm;
+    justify-self: center;
+
+}
+
+.enquiryForm form input[type="text"] {
+    width: 230px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    margin: 15px 0;
+    font-family: "Monserrat Medium", sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.enquiryForm textarea {
+    width: 230px;
+    height: 150px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    font-family: "Monserrat Medium", sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.enquiryForm input[type="submit"] {
+    display: block;
+    padding: 20px 50px;
+    background: #0087be;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    font-family: "Monserrat Medium", sans-serif;
+    font-size: 16px;
+}
+
+.enquiryForm input[type="submit"]:hover {
+    background-color: #2f788e;
+    cursor: pointer;
+    box-shadow: 4px 11px 30px 0px rgba(255, 255, 255, 0.2);
+}
+
+
+.copyRight {
+    background-color: #1a1a1a;
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: #615555;
+
+}

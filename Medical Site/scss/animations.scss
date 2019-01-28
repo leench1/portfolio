@@ -1,0 +1,124 @@
+@keyframes pulsate-fwd {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+@keyframes wobble-hor-bottom {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+@keyframes roll-out-blurred-left {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-1000px) rotate(-720deg);
+        filter: blur(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes roll-in-blurred-right {
+    0% {
+        transform: translateX(1000px) rotate(720deg);
+        filter: blur(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes headerAnimation {
+    0% {
+        background: url(../img/background_header.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    25% {
+        background: url(../img/background_header_1.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    50% {
+        background: url(../img/background_header_2.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    75% {
+        background: url(../img/background_header_3.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    100% {
+        background: url(../img/background_header.png) no-repeat center center;
+        background-size: cover;
+    }
+}

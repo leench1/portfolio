@@ -1,0 +1,1278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import "animations";
+@import "adaptive";
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(../fonts/OpenSans-Bold.ttf)
+}
+
+@font-face {
+    font-family: SocialIco;
+    src: url(../fonts/Socialico.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+$buttonBckColor: #1a9bdc;
+
+%socialicon {
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+}
+
+%headerIcon {
+    padding-left: 50px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #6a6a6a;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+body {
+    .content {
+
+        header {
+            padding: 50px;
+
+            @include respondTo(old_phones) {
+                padding: 5px;
+            }
+
+            .headerRow {
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+                grid-template-areas:
+                    "headerLogo workTime mailUs callUs";
+
+                @include respondTo(tablets) {
+                    justify-items: left;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-areas:
+                        "headerLogo workTime"
+                        "mailUs callUs";
+                }
+
+                @include respondTo(mobile) {
+                    justify-items: left;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-areas:
+                        "headerLogo workTime"
+                        "mailUs callUs";
+                }
+
+                @include respondTo(old_phones) {
+                    justify-items: left;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-areas:
+                        "headerLogo"
+                        "workTime"
+                        "mailUs"
+                        "callUs";
+                }
+
+                .headerLogo {
+                    grid-area: headerLogo;
+                }
+
+                .workTime {
+                    @extend %headerIcon;
+                    background: url(../img/clock.svg) no-repeat left center;
+                    background-size: contain;
+                    grid-area: workTime;
+
+                    @include respondTo(lg-desktops) {
+                        padding-left: 75px;
+                    }
+
+                    @include respondTo(small-desktops) {
+                        font-size: 12px;
+                        padding-left: 70px;
+                    }
+
+                    @media (max-width: 1023px) {
+                        background-size: 40px 40px;
+                    }
+
+                    .bold {
+                        font-weight: 700;
+                    }
+                }
+
+                .mailUs {
+                    @extend %headerIcon;
+                    background: url(../img/email.svg) no-repeat left center;
+                    background-size: contain;
+                    grid-area: mailUs;
+
+                    @include respondTo(lg-desktops) {
+                        padding-left: 75px;
+                    }
+
+                    @include respondTo(small-desktops) {
+                        font-size: 12px;
+                        padding-left: 70px;
+                    }
+
+                    @media (max-width: 1023px) {
+                        background-size: 40px 40px;
+                    }
+
+                    .bold {
+                        font-weight: 700;
+                    }
+                }
+
+                .callUs {
+                    @extend %headerIcon;
+                    background: url(../img/smartphone.svg) no-repeat left center;
+                    background-size: contain;
+                    grid-area: callUs;
+
+                    @include respondTo(lg-desktops) {
+                        padding-left: 75px;
+                    }
+
+                    @include respondTo(small-desktops) {
+                        font-size: 12px;
+                        padding-left: 70px;
+                    }
+
+                    @media (max-width: 1023px) {
+                        background-size: 40px 40px;
+                    }
+
+                    .bold {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            hr {
+                margin: 30px 0;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                ul li {
+                    float: left;
+                    list-style-type: none;
+
+                    @media (max-width: 767px) {
+                        float: none;
+                        margin-bottom: 20px;
+                    }
+
+                    a {
+                        margin: 15px;
+                        font-family: OpenSans-Bold, sans-serif;
+                        font-size: 20px;
+                        color: #6c6c6c;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #262626;
+                            text-shadow: #262626 1px 1px;
+                        }
+                    }
+                }
+            }
+
+            .socialIcons {
+
+                .facebook {
+                    @extend %socialicon;
+                    background-image: url(../img/facebook-letter-logo.svg);
+                }
+
+                .googlePlus {
+                    @extend %socialicon;
+                    background-image: url(../img/google-plus-logo.svg);
+                }
+
+                .vk {
+                    @extend %socialicon;
+                    background-image: url(../img/vk-social-logotype.svg);
+                }
+
+                .youTube {
+                    @extend %socialicon;
+                    background-image: url(../img/youtube-logo.svg);
+                }
+
+                .linkId {
+                    @extend %socialicon;
+                    background-image: url(../img/linkedin-logo.svg);
+                }
+            }
+        }
+
+        main {
+
+            .medicalImg {
+                width: 100%;
+                height: 640px;
+                background: url(../img/background_header.png) no-repeat center center;
+                background-size: cover;
+                animation: headerAnimation 50s ease infinite 5s;
+
+                .medicalPlanInside {
+                    width: 80%;
+                    margin: 0 auto;
+                    height: inherit;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .medicalContent {
+                        text-align: center;
+
+                        .medicalHeader {
+                            font-family: "Montserrat Medium", sans-serif;
+                            font-size: 47.69px;
+                            color: #474747;
+
+                            @media (max-width: 767px) {
+                                font-size: 30px;
+                            }
+                        }
+
+                        .medicalText {
+                            margin: 30px;
+                            font-family: OpenSans-Regular, sans-serif;
+                            color: #3f3f3f;
+                            font-size: 17px;
+                            font-weight: 400;
+                            line-height: 30px;
+
+                            @media (max-width: 767px) {
+                                font-size: 30px;
+                            }
+                        }
+
+                        button {
+                            padding: 10px 30px;
+                            border: 0;
+                            border-radius: 30px;
+                            background-color: $buttonBckColor;
+                            color: white;
+                            text-transform: uppercase;
+                            font-family: OpenSans-Bold, sans-serif;
+                            font-size: 17px;
+                            transition-duration: 1s;
+
+                            &:hover {
+                                transform: scale(1.2, 1.2);
+                                background-color: #2f788e;
+                                cursor: pointer;
+                                box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .medicalSpec {
+                color: white;
+                width: 100%;
+                background: linear-gradient(to right, #43b1d2, #37c3a8);
+
+                .specGrid {
+                    width: 95%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, minmax(150px, 1fr));
+
+                    @include respondTo(mobile) {
+                        grid-template-columns: repeat(2, minmax(150px, 1fr));
+                    }
+
+                    @include respondTo(old_phones) {
+                        grid-template-columns: repeat(1, minmax(150px, 1fr));
+                    }
+
+                    .specUnit {
+                        padding: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .specImg {
+                            text-align: center;
+
+                            img {
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+
+                        .unitHeader {
+                            font-family: "Montserrat Bold", sans-serif;
+                            font-size: 30px;
+                            text-align: center;
+                            margin: 25px 0;
+                        }
+
+                        .unitText {
+                            font-family: OpenSans-Regular, sans-serif;
+                            color: #ffffff;
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 30px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .whyChoose {
+                width: 100%;
+                margin: 0 auto;
+
+                .whyChooseHeader {
+                    margin-top: 100px;
+                    font-family: "Montserrat Bold", sans-serif;
+                    color: #494949;
+                    font-size: 45px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                .whyChooseText {
+                    width: 65%;
+                    margin: 30px auto;
+                    font-family: OpenSans-Regular, sans-serif;
+                    color: #6a6a6a;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+                .whyChooseGrid {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1fr 337px 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 25px;
+
+                    @media (min-width: 1025px) and (max-width: 1095px) {
+                        width: 95%;
+                    }
+
+                    @include respondTo(tablets) {
+                        grid-template-columns: 1fr 337px;
+                    }
+
+                    @media (max-width: 767px) {
+
+                        grid-template-columns: 1fr;
+                    }
+
+                    .whyChooseUnit {
+                        display: flex;
+                        flex-direction: column;
+
+                        @media (max-width: 767px) {
+                            align-items: center;
+                        }
+
+                        .whyUnitHeader {
+                            font-family: "Montserrat Bold", sans-serif;
+                            color: #6f6f6e;
+                            font-size: 30px;
+                            font-weight: 700;
+                            text-align: left;
+                            line-height: 75px;
+                            padding-left: 100px;
+                        }
+
+                        .choose1 {
+                            background: url(../img/why_choose1.png) no-repeat left center;
+                        }
+
+                        .choose2 {
+                            background: url(../img/why_choose2.png) no-repeat left center;
+                        }
+
+                        .choose3 {
+                            background: url(../img/why_choose3.png) no-repeat left center;
+                        }
+
+                        .choose4 {
+                            background: url(../img/why_choose4.png) no-repeat left center;
+                        }
+
+                        .whyUnitText {
+                            font-family: OpenSans-Regular, sans-serif;
+                            color: #6a6a6a;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 30px;
+                            text-align: left;
+                            padding-top: 15px;
+
+                            @include respondTo(mobile) {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .whyChooseImg {
+                        height: 598px;
+                        background: url(../img/choose_doctor.png) no-repeat center bottom;
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+
+                        @media (max-width: 767px) {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                        }
+                    }
+                }
+            }
+
+            .achievements {
+                width: 100%;
+                height: 592px;
+                background: url(../img/SVC1-Urgent-Care.jpg) no-repeat;
+                background-size: cover;
+                background-color: #1a9bdc;
+                background-blend-mode: color-burn;
+
+                @include respondTo(tablets) {
+                    height: auto;
+                    background-position: center;
+                }
+
+                @media (max-width: 767px) {
+                    height: auto;
+                }
+
+                .achievementsGrid {
+                    height: inherit;
+                    width: 80%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    align-content: center;
+
+
+                    @include respondTo(tablets) {
+                        grid-template-columns: repeat(2, 1fr);
+                        padding: 20px 0;
+                    }
+
+                    @media (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                        padding: 20px 0;
+                    }
+
+                    .achievementUnit {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: white;
+                        font-family: "Montserrat Medium", sans-serif;
+
+                        .img1 {
+                            width: 90px;
+                            height: 90px;
+                            background: url(../img/achievement1.png) no-repeat center center;
+                            background-size: contain;
+
+                            &:hover {
+
+                                animation: wobble-hor-bottom 0.8s both;
+                            }
+                        }
+
+                        .img2 {
+                            width: 90px;
+                            height: 90px;
+                            background: url(../img/achievement2.png) no-repeat center center;
+                            background-size: contain;
+
+                            &:hover {
+                                animation: pulsate-fwd 0.5s ease-in-out infinite both;
+                            }
+                        }
+
+                        .img3 {
+                            width: 90px;
+                            height: 90px;
+                            background: url(../img/achievement3.png) no-repeat center center;
+                            background-size: contain;
+
+                            &:hover {
+                                animation: vibrate-1 0.3s linear infinite both;
+                            }
+                        }
+
+                        .img4 {
+                            width: 90px;
+                            height: 90px;
+                            background: url(../img/achievement4.png) no-repeat center center;
+                            background-size: contain;
+
+                            &:hover {
+                                animation: pulsate-fwd 0.5s ease-in-out infinite both;
+                            }
+                        }
+                    }
+                }
+
+                .achievementDigit {
+                    font-size: 60px;
+                    padding-bottom: 50px;
+                    padding-top: 40px;
+                }
+
+                .achivementsHr {
+                    width: 90px;
+                    border-bottom: 4px solid white;
+                }
+
+                .achievementText {
+                    text-align: center;
+                    line-height: 45px;
+                    font-size: 25px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+
+    .workCreative {
+        margin: 100px 0;
+
+        @media (min-width: 768px) and (max-width:1199px) {
+            margin: 70px 20px;
+        }
+
+        .workCreativeGrid {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            grid-template-areas: "workHeader workHeader cretiveHeader"
+                "workText   workText   creativeText"
+                "workImgLeft workImgRight  heartTreatmentUnit"
+                "workDataLeft workDataRight heartPoint"
+                "button button .";
+
+            @media (min-width: 768px) and (max-width:1199px) {
+                width: 100%;
+            }
+
+            @media (min-width: 768px) and (max-width:1099px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "workHeader workHeader"
+                    "workText   workText"
+                    "cretiveHeader cretiveHeader"
+                    "creativeText creativeText"
+                    "workImgLeft workImgRight"
+                    "workDataLeft workDataRight"
+                    "heartTreatmentUnit heartPoint"
+                    "button button";
+            }
+
+            @media (min-width: 150px) and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "workHeader"
+                    "workText"
+                    "cretiveHeader"
+                    "creativeText"
+                    "workImgLeft"
+                    "workDataLeft"
+                    "workImgRight"
+                    "workDataRight"
+                    "heartTreatmentUnit"
+                    "heartPoint"
+                    "button";
+            }
+
+            .workHeader {
+                grid-area: workHeader;
+                font-family: "Montserrat Bold", sans-serif;
+                font-size: 45px;
+                color: #494949;
+            }
+
+            .workText {
+                grid-area: workText;
+                font-family: OpenSans-Regular, sans-serif;
+                color: #6a6a6a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+
+            .workImgLeft {
+                width: 334px;
+                height: 210px;
+                grid-area: workImgLeft;
+                background: url(../img/work_img1.jpg);
+            }
+
+            .workDataLeft {
+                grid-area: workDataLeft;
+
+            }
+
+            .workImgHeader {
+                grid-area: workImgHeader;
+                font-family: "Montserrat Medium", sans-serif;
+                color: #6f6f6e;
+                font-size: 20px;
+            }
+
+            .workImgText {
+                font-family: OpenSans-Regular, sans-serif;
+                color: #6a6a6a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+
+            .workImgData {
+                font-family: "Montserrat Medium", sans-serif;
+                color: #0087be;
+                margin: 15px 0;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .workImgRight {
+                width: 334px;
+                height: 210px;
+                grid-area: workImgRight;
+                background-image: url(../img/work_img2.jpg);
+            }
+
+            .workDataRight {
+                grid-area: workDataRight;
+            }
+
+            .cretiveHeader {
+                grid-area: cretiveHeader;
+                font-family: "Montserrat Bold", sans-serif;
+                font-size: 45px;
+                color: #494949;
+            }
+
+            .creativeText {
+                grid-area: creativeText;
+                font-family: OpenSans-Regular, sans-serif;
+                color: #6a6a6a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+
+            .heartTreatmentUnit {
+                .heartTreatmentHead {
+                    background: url(../img/heartPoint.png) no-repeat left 15px center;
+                    background-size: 45px;
+                    padding-left: 90px;
+                    grid-area: heartTreatmentHead;
+                    background-color: #0087be;
+                    border: 0;
+                    border-radius: 50px;
+                    color: white;
+                    font-family: "Montserrat Medium", sans-serif;
+                    font-size: 20px;
+                    line-height: 55px;
+
+                    @media (min-width: 768px) and (max-width:1199px) {
+                        padding-left: 65px;
+                    }
+                }
+            }
+
+            .heartPoint {
+                grid-area: heartPoint;
+                display: flex;
+                flex-direction: column;
+
+                .heartTreatment {
+                    background: url(../img/heartPoint.png) no-repeat left 15px center;
+                    background-size: 45px;
+                    padding-left: 90px;
+                    grid-area: heartTreatmentHead;
+                    background-color: #e2e2e2;
+                    border: 0;
+                    border-radius: 50px;
+                    color: #494949;
+                    font-family: "Montserrat Medium", sans-serif;
+                    font-size: 20px;
+                    line-height: 55px;
+
+                    @media (min-width: 768px) and (max-width:1199px) {
+                        padding-left: 65px;
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            button {
+                grid-area: button;
+                width: 200px;
+                margin: 0 auto;
+                padding: 10px 30px;
+                border: 0;
+                border-radius: 30px;
+                background-color: $buttonBckColor;
+                color: white;
+                text-transform: uppercase;
+                font-family: OpenSans-Bold, sans-serif;
+                font-size: 17px;
+                transition-duration: 1s;
+
+                &:hover {
+                    transform: scale(1.2, 1.2);
+                    background-color: #2f788e;
+                    cursor: pointer;
+                    box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+                }
+            }
+        }
+    }
+
+    .gallery {
+        width: 100%;
+        height: 730px;
+        background: url(../img/Gallery.jpg) no-repeat center center;
+        background-size: cover;
+        background-color: #1eb99b;
+        background-blend-mode: soft-light;
+        padding: 50px 0;
+
+        @media (max-width: 1199px) {
+            height: auto;
+        }
+
+        .galleryHeader {
+            text-align: center;
+            font-family: "Montserrat Bold", sans-serif;
+            color: #ffffff;
+            font-size: 45px;
+        }
+
+        .galleryText {
+            width: 80%;
+            margin: 0 auto;
+            font-family: OpenSans-Regular, sans-serif;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .galleryImg {
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            width: 80%;
+            margin: 45px auto;
+            grid-gap: 20px;
+
+            @media (min-width: 768px) and (max-width: 1199px) {
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+            }
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+
+            .galleryUnit {
+                width: 344px;
+                height: 209px;
+                position: relative;
+                perspective: 500px;
+
+                img {
+                    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1.5);
+                    transition-duration: .5s;
+                    transform: rotateX(0deg);
+                    transition-timing-function: linear;
+                    transition-delay: .5s;
+                }
+
+                &:hover img {
+                    transform: rotateX(-90deg);
+                    transition-delay: 0s;
+                }
+
+                .backGalleryText {
+                    transform: rotateX(90deg);
+                    transition-timing-function: linear;
+                    transition-duration: .5s;
+                    background: linear-gradient(to right, rgba(84, 255, 198, 1) 0%, rgba(93, 218, 240, 1) 100%);
+                    box-sizing: border-box;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    padding: 20px;
+                    font-family: OpenSans-Regular, sans-serif;
+                    color: white;
+                    text-align: justify;
+                    width: inherit;
+                    height: inherit;
+                }
+
+                &:hover .backGalleryText {
+                    transform: rotateX(0deg);
+                    transition-delay: .5s;
+                    box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 1.5);
+                }
+            }
+        }
+    }
+
+    .ourTeam {
+        padding: 50px 0;
+
+        .teamHeader {
+            font-family: "Montserrat Bold", sans-serif;
+            color: #494949;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .teamText {
+            font-family: OpenSans-Regular, sans-serif;
+            color: #6a6a6a;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .teamGrid {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            @include respondTo(tablets) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+            }
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-gap: 50px;
+            }
+
+            .teamUnit {
+                .doctorImg {
+                    text-align: center;
+                    position: relative;
+
+                    img {
+                        width: 249px;
+                        height: 249px;
+                        transition-duration: .5s;
+                        animation: roll-in-blurred-right 0.85s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+                    }
+
+                    &:hover img {
+                        animation: roll-out-blurred-left 0.55s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+                    }
+
+                    .registerDoctor {
+                        background: linear-gradient(to right, rgba(84, 255, 198, 1) 0%, rgba(93, 218, 240, 1) 100%);
+                        width: 249px;
+                        height: 249px;
+                        border: 0;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: 0 auto;
+                        top: 0;
+                        transition-duration: .5s;
+                        visibility: hidden;
+                        animation: roll-out-blurred-left 0.55s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+
+                        button {
+                            margin-top: 40%;
+                            padding: 15px 30px;
+                            background: none;
+                            border-radius: 40px;
+                            font-family: OpenSans-Regular, sans-serif;
+                            font-size: 18px;
+                            color: white;
+                        }
+                    }
+
+                    &:hover .registerDoctor {
+
+                        animation: roll-in-blurred-right 0.85s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+                        visibility: visible;
+                        width: 249px;
+                        height: 249px;
+                    }
+                }
+            }
+
+            .nameDoctor {
+                font-family: "Montserrat Medium", sans-serif;
+                color: #6f6f6e;
+                font-size: 25px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .positionDoctor {
+                font-family: "Montserrat Medium", sans-serif;
+                color: #6f6f6e;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 30px 0;
+                text-align: center;
+            }
+
+            .socialDoctor {
+                .facebook {
+                    @extend %socialicon;
+                    background-image: url(../img/facebook-letter-logo.svg);
+                }
+
+                .googlePlus {
+                    @extend %socialicon;
+                    background-image: url(../img/google-plus-logo.svg);
+                }
+
+                .vk {
+                    @extend %socialicon;
+                    background-image: url(../img/vk-social-logotype.svg);
+                }
+
+                width: 110px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.consultation {
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 70px 0;
+
+    @media (max-width: 767px) {
+        height: auto;
+        text-align: center;
+    }
+
+    .textConsultation {
+        width: 65%;
+        text-align: right;
+        margin-right: 150px;
+        float: left;
+        font-family: "Montserrat Bold", sans-serif;
+        color: #494949;
+        font-size: 30px;
+
+        @include respondTo(tablets) {
+            margin-right: 50px;
+        }
+
+        @media (max-width: 767px) {
+            float: none;
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+    }
+
+    button {
+        font-family: OpenSans-Bold, sans-serif;
+        font-size: 17px;
+        padding: 20px 40px;
+        border: 0;
+        border-radius: 30px;
+        background-color: $buttonBckColor;
+        color: white;
+        text-transform: uppercase;
+        transition-duration: 1s;
+
+        @media (min-width: 1301px) {
+            margin-top: -10px;
+        }
+
+        @media (max-width: 767px) {
+            margin: 20px;
+        }
+
+        &:hover {
+            background-color: #2f788e;
+            transform: scale(1.2, 1.2);
+            cursor: pointer;
+            box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 751px;
+    background-color: #171717;
+
+    @media (max-width: 1023px) {
+        height: auto;
+    }
+
+    .footerGrid {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 100px 0;
+        grid-template-areas: "getInTouch quickLink ourServices enquiryForm";
+
+        @include respondTo(tablets) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "getInTouch quickLink"
+                "ourServices enquiryForm";
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "getInTouch"
+                "quickLink"
+                "ourServices"
+                "enquiryForm";
+        }
+
+        .getInTouch {
+            grid-area: getInTouch;
+            justify-self: center;
+            font-family: OpenSans-Regular, sans-serif;
+            color: #6c6c6c;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+
+            .email {
+                background: url(../img/footer_mail.png) no-repeat left center;
+                padding-left: 60px;
+            }
+
+            .touchPhone {
+                background: url(../img/foote_phone.png) no-repeat left center;
+                padding-left: 60px;
+                margin: 55px 0;
+            }
+
+            .adress {
+                background: url(../img/footer_adress.png) no-repeat left center;
+                padding-left: 60px;
+            }
+        }
+
+        .gridHeader {
+            color: white;
+            font-family: OpenSans-Bold, sans-serif;
+            font-size: 22px;
+            line-height: 24px;
+            margin: 50px 0;
+        }
+
+        .quickLinks {
+            grid-area: quickLink;
+            justify-self: center;
+
+            li {
+                list-style-type: none;
+                padding-bottom: 20px;
+
+                &::before {
+                    content: '\25ba';
+                    padding-right: 15px;
+                    color: #0087be;
+                }
+
+                a {
+                    font-family: OpenSans-Regular, sans-serif;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #6c6c6c;
+                    line-height: 30px;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .ourServices {
+            grid-area: ourServices;
+            justify-self: center;
+
+            .listServices {
+                li {
+                    list-style-type: none;
+                    padding-bottom: 20px;
+
+                    &::before {
+                        content: '\25ba';
+                        padding-right: 15px;
+                        color: #0087be;
+                    }
+
+                    a {
+                        font-family: OpenSans-Regular, sans-serif;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #6c6c6c;
+                        line-height: 30px;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .enquiryForm {
+            grid-area: enquiryForm;
+            justify-self: center;
+
+            @media (max-width: 767px) {
+                text-align: center;
+            }
+
+            form {
+                input[type="text"] {
+                    width: 230px;
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 1px solid white;
+                    padding-left: 10px;
+                    margin: 15px 0;
+                    font-family: "Monserrat Medium", sans-serif;
+                    font-size: 16px;
+                    color: white;
+
+                    @media (max-width: 767px) {
+                        width: 75%;
+                    }
+                }
+
+                textarea {
+                    min-width: 230px;
+                    max-width: 400px;
+                    min-height: 150px;
+                    max-height: 350px;
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 1px solid white;
+                    padding-left: 10px;
+                    font-family: "Monserrat Medium", sans-serif;
+                    font-size: 16px;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    color: white;
+
+                    @media (max-width: 767px) {
+                        min-width: 75%;
+                        max-width: 99%;
+                    }
+                }
+
+                input[type="submit"] {
+                    display: block;
+                    padding: 20px 50px;
+                    background: $buttonBckColor;
+                    color: white;
+                    border: 0;
+                    border-radius: 30px;
+                    font-family: "Monserrat Medium", sans-serif;
+                    font-size: 16px;
+                    transition-duration: 1s;
+
+                    @media (max-width: 767px) {
+                        display: inline;
+                    }
+
+                    &:hover {
+                        transform: scale(1.2, 1.2);
+                        box-shadow: inset 0 0 15px 5px rgba(245, 243, 243, 0.551);
+                        background-color: #2f788e;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyRight {
+        background-color: #1a1a1a;
+        font-family: OpenSans-Regular, sans-serif;
+        font-size: 16px;
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        color: #615555;
+    }
+}

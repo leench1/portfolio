@@ -1,0 +1,1223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+    100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes roll-out-blurred-left {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px) rotate(-720deg);
+    filter: blur(50px);
+    opacity: 0;
+  }
+}
+@keyframes roll-in-blurred-right {
+  0% {
+    transform: translateX(1000px) rotate(720deg);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnimation {
+  0% {
+    background: url(../img/background_header.png) no-repeat center center;
+    background-size: cover;
+  }
+  25% {
+    background: url(../img/background_header_1.png) no-repeat center center;
+    background-size: cover;
+  }
+  50% {
+    background: url(../img/background_header_2.png) no-repeat center center;
+    background-size: cover;
+  }
+  75% {
+    background: url(../img/background_header_3.png) no-repeat center center;
+    background-size: cover;
+  }
+  100% {
+    background: url(../img/background_header.png) no-repeat center center;
+    background-size: cover;
+  }
+}
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: SocialIco;
+  src: url(../fonts/Socialico.ttf);
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+body .content header .socialIcons .facebook, body .content header .socialIcons .googlePlus, body .content header .socialIcons .vk, body .content header .socialIcons .youTube, body .content header .socialIcons .linkId, body .ourTeam .teamGrid .socialDoctor .facebook, body .ourTeam .teamGrid .socialDoctor .googlePlus, body .ourTeam .teamGrid .socialDoctor .vk {
+  margin-left: 10px;
+  float: left;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+}
+
+body .content header .headerRow .workTime, body .content header .headerRow .mailUs, body .content header .headerRow .callUs {
+  padding-left: 50px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #6a6a6a;
+  font-family: OpenSans-Regular, sans-serif;
+}
+
+body .content header {
+  padding: 50px;
+}
+@media (max-width: 479px) {
+  body .content header {
+    padding: 5px;
+  }
+}
+body .content header .headerRow {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-template-areas: "headerLogo workTime mailUs callUs";
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .content header .headerRow {
+    justify-items: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "headerLogo workTime" "mailUs callUs";
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  body .content header .headerRow {
+    justify-items: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "headerLogo workTime" "mailUs callUs";
+  }
+}
+@media (max-width: 479px) {
+  body .content header .headerRow {
+    justify-items: left;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "headerLogo" "workTime" "mailUs" "callUs";
+  }
+}
+body .content header .headerRow .headerLogo {
+  grid-area: headerLogo;
+}
+body .content header .headerRow .workTime {
+  background: url(../img/clock.svg) no-repeat left center;
+  background-size: contain;
+  grid-area: workTime;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  body .content header .headerRow .workTime {
+    padding-left: 75px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  body .content header .headerRow .workTime {
+    font-size: 12px;
+    padding-left: 70px;
+  }
+}
+@media (max-width: 1023px) {
+  body .content header .headerRow .workTime {
+    background-size: 40px 40px;
+  }
+}
+body .content header .headerRow .workTime .bold {
+  font-weight: 700;
+}
+body .content header .headerRow .mailUs {
+  background: url(../img/email.svg) no-repeat left center;
+  background-size: contain;
+  grid-area: mailUs;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  body .content header .headerRow .mailUs {
+    padding-left: 75px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  body .content header .headerRow .mailUs {
+    font-size: 12px;
+    padding-left: 70px;
+  }
+}
+@media (max-width: 1023px) {
+  body .content header .headerRow .mailUs {
+    background-size: 40px 40px;
+  }
+}
+body .content header .headerRow .mailUs .bold {
+  font-weight: 700;
+}
+body .content header .headerRow .callUs {
+  background: url(../img/smartphone.svg) no-repeat left center;
+  background-size: contain;
+  grid-area: callUs;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  body .content header .headerRow .callUs {
+    padding-left: 75px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  body .content header .headerRow .callUs {
+    font-size: 12px;
+    padding-left: 70px;
+  }
+}
+@media (max-width: 1023px) {
+  body .content header .headerRow .callUs {
+    background-size: 40px 40px;
+  }
+}
+body .content header .headerRow .callUs .bold {
+  font-weight: 700;
+}
+body .content header hr {
+  margin: 30px 0;
+}
+body .content header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  body .content header nav {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+body .content header nav ul li {
+  float: left;
+  list-style-type: none;
+}
+@media (max-width: 767px) {
+  body .content header nav ul li {
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+body .content header nav ul li a {
+  margin: 15px;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+}
+body .content header nav ul li a:hover {
+  color: #262626;
+  text-shadow: #262626 1px 1px;
+}
+body .content header .socialIcons .facebook {
+  background-image: url(../img/facebook-letter-logo.svg);
+}
+body .content header .socialIcons .googlePlus {
+  background-image: url(../img/google-plus-logo.svg);
+}
+body .content header .socialIcons .vk {
+  background-image: url(../img/vk-social-logotype.svg);
+}
+body .content header .socialIcons .youTube {
+  background-image: url(../img/youtube-logo.svg);
+}
+body .content header .socialIcons .linkId {
+  background-image: url(../img/linkedin-logo.svg);
+}
+body .content main .medicalImg {
+  width: 100%;
+  height: 640px;
+  background: url(../img/background_header.png) no-repeat center center;
+  background-size: cover;
+  animation: headerAnimation 50s ease infinite 5s;
+}
+body .content main .medicalImg .medicalPlanInside {
+  width: 80%;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .content main .medicalImg .medicalPlanInside .medicalContent {
+  text-align: center;
+}
+body .content main .medicalImg .medicalPlanInside .medicalContent .medicalHeader {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 47.69px;
+  color: #474747;
+}
+@media (max-width: 767px) {
+  body .content main .medicalImg .medicalPlanInside .medicalContent .medicalHeader {
+    font-size: 30px;
+  }
+}
+body .content main .medicalImg .medicalPlanInside .medicalContent .medicalText {
+  margin: 30px;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #3f3f3f;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+@media (max-width: 767px) {
+  body .content main .medicalImg .medicalPlanInside .medicalContent .medicalText {
+    font-size: 30px;
+  }
+}
+body .content main .medicalImg .medicalPlanInside .medicalContent button {
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #1a9bdc;
+  color: white;
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 17px;
+  transition-duration: 1s;
+}
+body .content main .medicalImg .medicalPlanInside .medicalContent button:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #2f788e;
+  cursor: pointer;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+}
+body .content main .medicalSpec {
+  color: white;
+  width: 100%;
+  background: linear-gradient(to right, #43b1d2, #37c3a8);
+}
+body .content main .medicalSpec .specGrid {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  body .content main .medicalSpec .specGrid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 479px) {
+  body .content main .medicalSpec .specGrid {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+  }
+}
+body .content main .medicalSpec .specGrid .specUnit {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .content main .medicalSpec .specGrid .specUnit .specImg {
+  text-align: center;
+}
+body .content main .medicalSpec .specGrid .specUnit .specImg img {
+  width: 75px;
+  height: 75px;
+}
+body .content main .medicalSpec .specGrid .specUnit .unitHeader {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 25px 0;
+}
+body .content main .medicalSpec .specGrid .specUnit .unitText {
+  font-family: OpenSans-Regular, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+body .content main .whyChoose {
+  width: 100%;
+  margin: 0 auto;
+}
+body .content main .whyChoose .whyChooseHeader {
+  margin-top: 100px;
+  font-family: "Montserrat Bold", sans-serif;
+  color: #494949;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+body .content main .whyChoose .whyChooseText {
+  width: 65%;
+  margin: 30px auto;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+body .content main .whyChoose .whyChooseGrid {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 337px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 25px;
+}
+@media (min-width: 1025px) and (max-width: 1095px) {
+  body .content main .whyChoose .whyChooseGrid {
+    width: 95%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .content main .whyChoose .whyChooseGrid {
+    grid-template-columns: 1fr 337px;
+  }
+}
+@media (max-width: 767px) {
+  body .content main .whyChoose .whyChooseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  body .content main .whyChoose .whyChooseGrid .whyChooseUnit {
+    align-items: center;
+  }
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .whyUnitHeader {
+  font-family: "Montserrat Bold", sans-serif;
+  color: #6f6f6e;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 75px;
+  padding-left: 100px;
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .choose1 {
+  background: url(../img/why_choose1.png) no-repeat left center;
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .choose2 {
+  background: url(../img/why_choose2.png) no-repeat left center;
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .choose3 {
+  background: url(../img/why_choose3.png) no-repeat left center;
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .choose4 {
+  background: url(../img/why_choose4.png) no-repeat left center;
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseUnit .whyUnitText {
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  padding-top: 15px;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  body .content main .whyChoose .whyChooseGrid .whyChooseUnit .whyUnitText {
+    text-align: center;
+  }
+}
+body .content main .whyChoose .whyChooseGrid .whyChooseImg {
+  height: 598px;
+  background: url(../img/choose_doctor.png) no-repeat center bottom;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+@media (max-width: 767px) {
+  body .content main .whyChoose .whyChooseGrid .whyChooseImg {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+body .content main .achievements {
+  width: 100%;
+  height: 592px;
+  background: url(../img/SVC1-Urgent-Care.jpg) no-repeat;
+  background-size: cover;
+  background-color: #1a9bdc;
+  background-blend-mode: color-burn;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .content main .achievements {
+    height: auto;
+    background-position: center;
+  }
+}
+@media (max-width: 767px) {
+  body .content main .achievements {
+    height: auto;
+  }
+}
+body .content main .achievements .achievementsGrid {
+  height: inherit;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .content main .achievements .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0;
+  }
+}
+@media (max-width: 767px) {
+  body .content main .achievements .achievementsGrid {
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+  }
+}
+body .content main .achievements .achievementsGrid .achievementUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat Medium", sans-serif;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img1 {
+  width: 90px;
+  height: 90px;
+  background: url(../img/achievement1.png) no-repeat center center;
+  background-size: contain;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img1:hover {
+  animation: wobble-hor-bottom 0.8s both;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img2 {
+  width: 90px;
+  height: 90px;
+  background: url(../img/achievement2.png) no-repeat center center;
+  background-size: contain;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img2:hover {
+  animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img3 {
+  width: 90px;
+  height: 90px;
+  background: url(../img/achievement3.png) no-repeat center center;
+  background-size: contain;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img3:hover {
+  animation: vibrate-1 0.3s linear infinite both;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img4 {
+  width: 90px;
+  height: 90px;
+  background: url(../img/achievement4.png) no-repeat center center;
+  background-size: contain;
+}
+body .content main .achievements .achievementsGrid .achievementUnit .img4:hover {
+  animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+body .content main .achievements .achievementDigit {
+  font-size: 60px;
+  padding-bottom: 50px;
+  padding-top: 40px;
+}
+body .content main .achievements .achivementsHr {
+  width: 90px;
+  border-bottom: 4px solid white;
+}
+body .content main .achievements .achievementText {
+  text-align: center;
+  line-height: 45px;
+  font-size: 25px;
+  margin-top: 50px;
+}
+body .workCreative {
+  margin: 100px 0;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .workCreative {
+    margin: 70px 20px;
+  }
+}
+body .workCreative .workCreativeGrid {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "workHeader workHeader cretiveHeader" "workText   workText   creativeText" "workImgLeft workImgRight  heartTreatmentUnit" "workDataLeft workDataRight heartPoint" "button button .";
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .workCreative .workCreativeGrid {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  body .workCreative .workCreativeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "workHeader workHeader" "workText   workText" "cretiveHeader cretiveHeader" "creativeText creativeText" "workImgLeft workImgRight" "workDataLeft workDataRight" "heartTreatmentUnit heartPoint" "button button";
+  }
+}
+@media (min-width: 150px) and (max-width: 767px) {
+  body .workCreative .workCreativeGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "workHeader" "workText" "cretiveHeader" "creativeText" "workImgLeft" "workDataLeft" "workImgRight" "workDataRight" "heartTreatmentUnit" "heartPoint" "button";
+  }
+}
+body .workCreative .workCreativeGrid .workHeader {
+  grid-area: workHeader;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 45px;
+  color: #494949;
+}
+body .workCreative .workCreativeGrid .workText {
+  grid-area: workText;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+body .workCreative .workCreativeGrid .workImgLeft {
+  width: 334px;
+  height: 210px;
+  grid-area: workImgLeft;
+  background: url(../img/work_img1.jpg);
+}
+body .workCreative .workCreativeGrid .workDataLeft {
+  grid-area: workDataLeft;
+}
+body .workCreative .workCreativeGrid .workImgHeader {
+  grid-area: workImgHeader;
+  font-family: "Montserrat Medium", sans-serif;
+  color: #6f6f6e;
+  font-size: 20px;
+}
+body .workCreative .workCreativeGrid .workImgText {
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+body .workCreative .workCreativeGrid .workImgData {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #0087be;
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+body .workCreative .workCreativeGrid .workImgRight {
+  width: 334px;
+  height: 210px;
+  grid-area: workImgRight;
+  background-image: url(../img/work_img2.jpg);
+}
+body .workCreative .workCreativeGrid .workDataRight {
+  grid-area: workDataRight;
+}
+body .workCreative .workCreativeGrid .cretiveHeader {
+  grid-area: cretiveHeader;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 45px;
+  color: #494949;
+}
+body .workCreative .workCreativeGrid .creativeText {
+  grid-area: creativeText;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+body .workCreative .workCreativeGrid .heartTreatmentUnit .heartTreatmentHead {
+  background: url(../img/heartPoint.png) no-repeat left 15px center;
+  background-size: 45px;
+  padding-left: 90px;
+  grid-area: heartTreatmentHead;
+  background-color: #0087be;
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 20px;
+  line-height: 55px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .workCreative .workCreativeGrid .heartTreatmentUnit .heartTreatmentHead {
+    padding-left: 65px;
+  }
+}
+body .workCreative .workCreativeGrid .heartPoint {
+  grid-area: heartPoint;
+  display: flex;
+  flex-direction: column;
+}
+body .workCreative .workCreativeGrid .heartPoint .heartTreatment {
+  background: url(../img/heartPoint.png) no-repeat left 15px center;
+  background-size: 45px;
+  padding-left: 90px;
+  grid-area: heartTreatmentHead;
+  background-color: #e2e2e2;
+  border: 0;
+  border-radius: 50px;
+  color: #494949;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 20px;
+  line-height: 55px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .workCreative .workCreativeGrid .heartPoint .heartTreatment {
+    padding-left: 65px;
+  }
+}
+body .workCreative .workCreativeGrid .heartPoint .heartTreatment:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body .workCreative .workCreativeGrid button {
+  grid-area: button;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #1a9bdc;
+  color: white;
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 17px;
+  transition-duration: 1s;
+}
+body .workCreative .workCreativeGrid button:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #2f788e;
+  cursor: pointer;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+}
+body .gallery {
+  width: 100%;
+  height: 730px;
+  background: url(../img/Gallery.jpg) no-repeat center center;
+  background-size: cover;
+  background-color: #1eb99b;
+  background-blend-mode: soft-light;
+  padding: 50px 0;
+}
+@media (max-width: 1199px) {
+  body .gallery {
+    height: auto;
+  }
+}
+body .gallery .galleryHeader {
+  text-align: center;
+  font-family: "Montserrat Bold", sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+}
+body .gallery .galleryText {
+  width: 80%;
+  margin: 0 auto;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  padding: 30px 0;
+}
+body .gallery .galleryImg {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 45px auto;
+  grid-gap: 20px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .gallery .galleryImg {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  body .gallery .galleryImg {
+    grid-template-columns: 1fr;
+  }
+}
+body .gallery .galleryImg .galleryUnit {
+  width: 344px;
+  height: 209px;
+  position: relative;
+  perspective: 500px;
+}
+body .gallery .galleryImg .galleryUnit img {
+  box-shadow: 0 0 15px 5px white;
+  transition-duration: .5s;
+  transform: rotateX(0deg);
+  transition-timing-function: linear;
+  transition-delay: .5s;
+}
+body .gallery .galleryImg .galleryUnit:hover img {
+  transform: rotateX(-90deg);
+  transition-delay: 0s;
+}
+body .gallery .galleryImg .galleryUnit .backGalleryText {
+  transform: rotateX(90deg);
+  transition-timing-function: linear;
+  transition-duration: .5s;
+  background: linear-gradient(to right, #54ffc6 0%, #5ddaf0 100%);
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  font-family: OpenSans-Regular, sans-serif;
+  color: white;
+  text-align: justify;
+  width: inherit;
+  height: inherit;
+}
+body .gallery .galleryImg .galleryUnit:hover .backGalleryText {
+  transform: rotateX(0deg);
+  transition-delay: .5s;
+  box-shadow: inset 0 0 15px 5px white;
+}
+body .ourTeam {
+  padding: 50px 0;
+}
+body .ourTeam .teamHeader {
+  font-family: "Montserrat Bold", sans-serif;
+  color: #494949;
+  font-size: 45px;
+  text-align: center;
+}
+body .ourTeam .teamText {
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  padding: 40px 0;
+}
+body .ourTeam .teamGrid {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .ourTeam .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  body .ourTeam .teamGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg {
+  text-align: center;
+  position: relative;
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg img {
+  width: 249px;
+  height: 249px;
+  transition-duration: .5s;
+  animation: roll-in-blurred-right 0.85s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg:hover img {
+  animation: roll-out-blurred-left 0.55s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg .registerDoctor {
+  background: linear-gradient(to right, #54ffc6 0%, #5ddaf0 100%);
+  width: 249px;
+  height: 249px;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  top: 0;
+  transition-duration: .5s;
+  visibility: hidden;
+  animation: roll-out-blurred-left 0.55s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg .registerDoctor button {
+  margin-top: 40%;
+  padding: 15px 30px;
+  background: none;
+  border-radius: 40px;
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  color: white;
+}
+body .ourTeam .teamGrid .teamUnit .doctorImg:hover .registerDoctor {
+  animation: roll-in-blurred-right 0.85s cubic-bezier(0.23, 1, 0.32, 1) both;
+  visibility: visible;
+  width: 249px;
+  height: 249px;
+}
+body .ourTeam .teamGrid .nameDoctor {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #6f6f6e;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+body .ourTeam .teamGrid .positionDoctor {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #6f6f6e;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 30px 0;
+  text-align: center;
+}
+body .ourTeam .teamGrid .socialDoctor {
+  width: 110px;
+  margin: 0 auto;
+}
+body .ourTeam .teamGrid .socialDoctor .facebook {
+  background-image: url(../img/facebook-letter-logo.svg);
+}
+body .ourTeam .teamGrid .socialDoctor .googlePlus {
+  background-image: url(../img/google-plus-logo.svg);
+}
+body .ourTeam .teamGrid .socialDoctor .vk {
+  background-image: url(../img/vk-social-logotype.svg);
+}
+
+.consultation {
+  width: 100%;
+  background-color: #e2e2e2;
+  padding: 70px 0;
+}
+@media (max-width: 767px) {
+  .consultation {
+    height: auto;
+    text-align: center;
+  }
+}
+.consultation .textConsultation {
+  width: 65%;
+  text-align: right;
+  margin-right: 150px;
+  float: left;
+  font-family: "Montserrat Bold", sans-serif;
+  color: #494949;
+  font-size: 30px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .consultation .textConsultation {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation .textConsultation {
+    float: none;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+.consultation button {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 17px;
+  padding: 20px 40px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #1a9bdc;
+  color: white;
+  text-transform: uppercase;
+  transition-duration: 1s;
+}
+@media (min-width: 1301px) {
+  .consultation button {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation button {
+    margin: 20px;
+  }
+}
+.consultation button:hover {
+  background-color: #2f788e;
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+}
+
+footer {
+  width: 100%;
+  height: 751px;
+  background-color: #171717;
+}
+@media (max-width: 1023px) {
+  footer {
+    height: auto;
+  }
+}
+footer .footerGrid {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 100px 0;
+  grid-template-areas: "getInTouch quickLink ourServices enquiryForm";
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "getInTouch quickLink" "ourServices enquiryForm";
+  }
+}
+@media (max-width: 767px) {
+  footer .footerGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "getInTouch" "quickLink" "ourServices" "enquiryForm";
+  }
+}
+footer .footerGrid .getInTouch {
+  grid-area: getInTouch;
+  justify-self: center;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #6c6c6c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+footer .footerGrid .getInTouch .email {
+  background: url(../img/footer_mail.png) no-repeat left center;
+  padding-left: 60px;
+}
+footer .footerGrid .getInTouch .touchPhone {
+  background: url(../img/foote_phone.png) no-repeat left center;
+  padding-left: 60px;
+  margin: 55px 0;
+}
+footer .footerGrid .getInTouch .adress {
+  background: url(../img/footer_adress.png) no-repeat left center;
+  padding-left: 60px;
+}
+footer .footerGrid .gridHeader {
+  color: white;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+  margin: 50px 0;
+}
+footer .footerGrid .quickLinks {
+  grid-area: quickLink;
+  justify-self: center;
+}
+footer .footerGrid .quickLinks li {
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+footer .footerGrid .quickLinks li::before {
+  content: '\25ba';
+  padding-right: 15px;
+  color: #0087be;
+}
+footer .footerGrid .quickLinks li a {
+  font-family: OpenSans-Regular, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c6c6c;
+  line-height: 30px;
+}
+footer .footerGrid .quickLinks li a:hover {
+  color: white;
+}
+footer .footerGrid .ourServices {
+  grid-area: ourServices;
+  justify-self: center;
+}
+footer .footerGrid .ourServices .listServices li {
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+footer .footerGrid .ourServices .listServices li::before {
+  content: '\25ba';
+  padding-right: 15px;
+  color: #0087be;
+}
+footer .footerGrid .ourServices .listServices li a {
+  font-family: OpenSans-Regular, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c6c6c;
+  line-height: 30px;
+}
+footer .footerGrid .ourServices .listServices li a:hover {
+  color: white;
+}
+footer .footerGrid .enquiryForm {
+  grid-area: enquiryForm;
+  justify-self: center;
+}
+@media (max-width: 767px) {
+  footer .footerGrid .enquiryForm {
+    text-align: center;
+  }
+}
+footer .footerGrid .enquiryForm form input[type="text"] {
+  width: 230px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  padding-left: 10px;
+  margin: 15px 0;
+  font-family: "Monserrat Medium", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+@media (max-width: 767px) {
+  footer .footerGrid .enquiryForm form input[type="text"] {
+    width: 75%;
+  }
+}
+footer .footerGrid .enquiryForm form textarea {
+  min-width: 230px;
+  max-width: 400px;
+  min-height: 150px;
+  max-height: 350px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  padding-left: 10px;
+  font-family: "Monserrat Medium", sans-serif;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+@media (max-width: 767px) {
+  footer .footerGrid .enquiryForm form textarea {
+    min-width: 75%;
+    max-width: 99%;
+  }
+}
+footer .footerGrid .enquiryForm form input[type="submit"] {
+  display: block;
+  padding: 20px 50px;
+  background: #1a9bdc;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  font-family: "Monserrat Medium", sans-serif;
+  font-size: 16px;
+  transition-duration: 1s;
+}
+@media (max-width: 767px) {
+  footer .footerGrid .enquiryForm form input[type="submit"] {
+    display: inline;
+  }
+}
+footer .footerGrid .enquiryForm form input[type="submit"]:hover {
+  transform: scale(1.2, 1.2);
+  box-shadow: inset 0 0 15px 5px rgba(245, 243, 243, 0.551);
+  background-color: #2f788e;
+  cursor: pointer;
+}
+footer .copyRight {
+  background-color: #1a1a1a;
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  color: #615555;
+}
+
+/*# sourceMappingURL=style.css.map */
