@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test PSD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="timer">
+                <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+                <script src="https://e-timer.ru/js/etimer.js"></script>
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
+                        jQuery(".eTimer").eTimer({
+                            etType: 0,
+                            etDate: "01.09.2019.12.0",
+                            etShowSign: 1,
+                            etSep: ":",
+                            etFontFamily: "Roboto-Thin",
+                            etTextColor: "#a3a3a3",
+                            etPaddingTB: 0,
+                            etPaddingLR: 0,
+                            etBorderSize: 0,
+                            etBorderRadius: 0,
+                            etBorderColor: "white",
+                            etShadow: "inset 0px 0px 0px 0px #333333",
+                            etLastUnit: 4,
+                            etNumberFontFamily: "Roboto-Bold",
+                            etNumberSize: 65,
+                            etNumberColor: "white",
+                            etNumberPaddingTB: 0,
+                            etNumberPaddingLR: 0,
+                            etNumberBorderSize: 0,
+                            etNumberBorderRadius: 0,
+                            etNumberBorderColor: "white",
+                            etNumberShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.5)"
+                        });
+                    });
+                </script>
+                <div class="eTimer"></div>
+            </div>
+
+            <div class="bangladesh">
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                    <p>
+                        <span class="textLogo">
+                            EVANT
+                        </span> Bangladesh
+                    </p>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#eventGroup">EVENT DETAILS</a></li>
+                    <li><a href="#speakers">SPEAKERS</a></li>
+                    <li><a href="#sponsor">SPONSORS</a></li>
+                    <li><a href="#pastEvents">PAST EVENTS</a></li>
+                    <li><a href="#divViewMore">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="formSign">
+                <form action="#">
+                    <p>Sign up for you event </p>
+                    <br>
+                    <input class="sign" type="text" placeholder="Enter your Name">
+                    <br>
+                    <br>
+                    <input class="sign" type="text" placeholder="Enter your e-mail">
+                    <br>
+                    <br>
+                    <input class="sign" type="text" placeholder="Number phone">
+                    <br>
+                    <br>
+                    <input type="submit" value="Let me in !">
+                    <p class="hurry">Hurry up, Limited seats availble
+                        <br>*we will never spam your email</p>
+                </form>
+            </div>
+            <div class="welcom"> <span class="welcomeHeading">Welcome !</span>
+                <br>
+                <br> The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it too...
+                <br>
+                <br> Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!
+                <br>
+                <br> It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;) Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our nvite page here too! </div>
+            <br>
+            <div id="eventGroup">
+                <div class="vectorObject">
+                    <div class="vectorImg"> <img src="img/Vector%20Smart%20Object-2.png" alt=""> </div>
+                    <p> Community </p>
+                    <div class="textVectorImg"> Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging each other with interesting coversation and topics. We will have loads of fun. </div>
+                </div>
+                <div class="vectorObject">
+                    <div class="vectorImg"> <img src="img/Vector%20Smart%20Object-1.png" alt=""> </div>
+                    <p> Talk Shop </p>
+                    <div class="textVectorImg"> In this meetup you will get to know the marketplaces better, because that’s why were all here for right? Learn a few tips and tricks from experienced authors from all over the country. </div>
+                </div>
+                <div class="vectorObject">
+                    <div class="vectorImg"> <img src="img/Vector%20Smart%20Object-3.png" alt=""> </div>
+                    <p> War Stories </p>
+                    <div class="textVectorImg"> Gather round fellow authors! Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful. </div>
+                </div>
+            </div>
+            <div class="eventTable">
+                <table class="eventShedule">
+                    <tr class="tHead">
+                        <td class="time">Time</td>
+                        <td class="description">Stuff that will happen</td>
+                        <td class="buttonPlus"></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10am - 12pm</td>
+                        <td class="description">Introduction and presentations about Envato</td>
+                        <td class="buttonPlus">
+                            <input class="button" type="button" value="+"> </td>
+                    </tr>
+                    <tr>
+                        <td class="time">12pm - 02 pm</td>
+                        <td class="description">Sessions by honorable guests and Speakers</td>
+                        <td class="buttonPlus">
+                            <input class="button" type="button" value="+"> </td>
+                    <tr>
+                        <td class="time">02pm - 03pm</td>
+                        <td class="description">Break and Mingle time with the authors</td>
+                        <td class="buttonPlus">
+                            <input class="button" type="button" value="+"> </td>
+                    </tr>
+                    <tr>
+                        <td class="time">03pm - 05pm</td>
+                        <td class="description">Portfolio Review, Rewards and Ending Presentation</td>
+                        <td class="buttonPlus">
+                            <input class="button" type="button" value="+"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="textAftertable"> Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour for some time more, what harm could it do? :) </div>
+            <div class="eliteBadge">
+                <div class="envato">
+                    <img src="img/Elite%20Badge.png" alt="">
+                </div>
+                <div class="headingElites"> We reward the Elites! </div>
+                <div class="textElites"> Are you an Elite author in the Envato Marketplaces? If so we are proud of you! We want to give our thanks in achieving great success in the marketplace and we want to make known to the people of our country that you are amazing! Our Elite gifting program includes giving you special merchandize from our community and also promote your works in our community.
+                    <br>
+                    <br>All you have to do is contact us by clicking the button here and then its just going to the event, saying something motivational and taking that swag while looking amazing infront of thousands of other community members.
+                    <br>
+                    <br>*Be advised, we will only give you Elite thank you swag for each level of elite you cross. That means if you do not cross to the next elite level before the next event, you cannot claim your prizes. </div>
+                <div class="buttonBring">
+                    <input class="" type="button" value="Bring on the swag !"> </div>
+            </div>
+            <div id="speakers">
+                <p> Speakers </p> Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects regarding being a digital product author, working at envato and marketing your business.
+                <br> Hope you will have a great time listening to our presentations!
+            </div>
+            <div class="tableHand">
+                <div class="center">
+                    <div class="block1"></div>
+                    <div class="block2">
+                        <p>Shahriyer Shuvo</p>
+                        <div class="line"></div>
+                        <p>More about selling in the Envato Marketplaces</p>
+                        <div class="pic">
+                            <div class="pic1"> <img src="img/facebook_mini.png" alt=""> </div>
+                            <div class="pic1"> <img src="img/twitter_mini.png" alt=""> </div>
+                            <div class="pic1"> <img src="img/behance_mini.png" alt=""> </div>
+                            <div class="pic1"> <img src="img/dribbble_mini.png" alt=""> </div>
+                        </div>
+                    </div>
+                    <div class="block1"></div>
+                    <div class="block1"></div>
+                    <div class="blockimg"></div>
+                    <div class="block1"></div>
+                    <div class="block1"></div>
+                    <div class="block1"></div>
+                    <div class="block1"></div>
+                </div>
+            </div>
+
+
+            <div id="sponsor">
+                <p class="headingSponsor">Sponsor Our Event!</p>
+                <p class="textSponsor">If you want to help us making this event lively and successful, help us by sponsoring our event!
+                    <br>This will help us bring in more people, have better livestreaming equipment, maybe even our own chef!
+                    <br> You can also sponsor us by giving away free swag at the event!
+                    <br>
+                    <br>Here’s who have sponsored us already:</p>
+                <div class="sponsorLogo">
+                    <div class="logoSponsor"> <img src="img/mount.png" alt=""> </div>
+                    <div class="logoSponsor"> <img src="img/S.png" alt=""> </div>
+                    <div class="logoSponsor"> <img src="img/envato.png" alt=""> </div>
+                </div>
+            </div>
+            <div id="pastEvents"> Past Events </div>
+            <div class="textPastEvents"> Check out the photos of our previous events where we rocked with a lot of Famous and enthusiatic authors! We’re always planning to make our future events feel fresh and fun to be at. :) </div>
+            <div class="colorQuad">
+                <div class="centerQuad">
+                    <div class="quadBlue"></div>
+                    <div class="quadGreen"></div>
+                    <div class="quadOrange"></div>
+                    <div class="quadBrown"></div>
+                </div>
+            </div>
+            <div id="divViewMore">
+                <input class="buttonViewMore" type="button" value="View More"> </div>
+            <div class="messages">
+                <div class="formMessages">
+                    <div class="left">
+                        <div class="imgForm"><img src="img/Vector%20Smart%20Object-6.png" alt=""></div>
+                        <p> Lorem Ipsum Avenue, 420/2 elm
+                            <br> street, Melbourne, Sydney - 2122,
+                            <br> Kingdom of Australia </p>
+                        <div class="buttonMessages">
+                            <input class="buttonViewMap" type="button" value="View Map"> </div>
+                    </div>
+                    <div class="right">
+                        <div class="emailInput">
+                            <input class="emailForMap" type="text" placeholder="ingeniousartist@gmail.com"> </div>
+                        <div class="textMessages">
+                            <input class="message" type="text" placeholder="Type your message"> </div>
+                        <div class="sendButton">
+                            <input class="buttonSend" type="button" value="Send Message"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="socialContact">
+                <div class="socialImg">
+                    <a href="https://ru-ru.facebook.com/" target="_blank"> <img src="img/facebook.png" alt="facebook"> </a>
+                </div>
+                <div class="socialImg">
+                    <a href="https://twitter.com/?lang=ru" target="_blank"> <img src="img/twitter.png" alt=""> </a>
+                </div>
+                <div class="socialImg">
+                    <a href="https://odnoklassniki.ru" target="_blank"> <img src="img/ok.png" alt="odnoklassniki"> </a>
+                </div>
+                <div class="socialImg">
+                    <a href="https://www.vk.com" target="_blank"> <img src="img/vk.png" alt="vk"> </a>
+                </div>
+            </div>
+            <div class="copyRight">Hope we see you at the event! All Rights Reserved. Envato Bangladesh © 2018</div>
+        </div>
+    </div>
+</body>
+
+</html>

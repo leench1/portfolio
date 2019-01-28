@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -72px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Стили header'a*/
+
+.header {
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 755px;
+}
+
+.menu {
+    color: white;
+    float: right;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+
+.menu li {
+    float: left;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.menu li a {
+    border: 2px solid transparent;
+    padding: 10px;
+}
+
+.menu li a:link {
+    color: white;
+}
+
+.menu li a:visited {
+    color: whitesmoke;
+}
+
+.menu li a:hover {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.menu li a {
+    font-family: Roboto-Thin;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.bangladesh {
+    width: 212px;
+    height: 70px;
+    float: left;
+    margin-left: 5%;
+    margin-top: 2%;
+
+}
+
+.logo {
+    color: #81b052;
+}
+
+.logo img {
+    float: left;
+}
+
+.textLogo {
+    font-family: Roboto-Bold;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 36px;
+}
+
+.logo p {
+    font-family: Roboto-Bold;
+    font-size: 18px;
+    letter-spacing: 4px;
+
+}
+
+.timer {
+    width: 392px;
+    height: 69px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eTimer {
+    margin-top: 65%;
+}
+
+.formSign {
+    position: relative;
+    width: 300px;
+    background-color: white;
+    float: right;
+    border: 2px inset grey;
+    margin-right: 10%;
+    margin-top: -180px;
+    margin-bottom: 15px;
+}
+
+
+/* Конец стилей header'a*/
+
+
+/* Стили main'a*/
+
+.main {
+    flex: 1 0 auto;
+}
+
+form p {
+    padding-top: 15px;
+    text-align: center;
+    font-family: Roboto-Bold;
+    font-size: 22px;
+}
+
+form .hurry {
+    font-size: 10pt;
+    text-align: center;
+    font-family: Roboto-Thin;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.sign {
+    width: 91%;
+    height: 35px;
+    margin-left: 2%;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 45px;
+    background-color: #90d23d;
+    font-family: Roboto-Bold;
+    font-size: 20pt;
+    color: white;
+}
+
+.welcom {
+    width: 30%;
+    margin-left: 15%;
+    font-family: Roboto-light;
+    font-size: 14px;
+    line-height: 17px;
+    color: #242424;
+    margin-bottom: 8%;
+}
+
+.welcomeHeading {
+    font-family: Roboto-Black;
+    font-size: 40px;
+}
+
+#eventGroup {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.vectorObject {
+    margin: 10px;
+    width: 300px;
+    flex: 1;
+}
+
+.vectorObject p {
+    font-family: Roboto-Black;
+    font-size: 25px;
+    text-align: center;
+}
+
+.textVectorImg {
+    font-family: Roboto-light;
+    text-align: center;
+    color: #242424;
+}
+
+.vectorImg img {
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.eventTable {
+    overflow-x: auto;
+}
+.eventShedule {
+    margin: 0 auto;
+    width: 855px;
+    height: 275px;
+    margin-top: 8%;
+    color: white;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.tHead {
+    background-color: #a3cc40 !important;
+    height: 55px;
+    font-family: Roboto-Bold !important;
+}
+
+.tHead td:last-child {
+    border-top-right-radius: 10px;
+}
+
+.tHead td:first-child {
+    border-top-left-radius: 10px;
+}
+
+.eventShedule tr {
+    background-color: #4b4d4f;
+    color: white;
+    font-family: Roboto-light;
+}
+
+.eventShedule tr:nth-child(2n) {
+    background-color: #373737;
+    color: white;
+}
+
+.time {
+    text-align: center;
+}
+
+.description {
+    padding-left: 5%;
+}
+
+.buttonPlus {
+    padding-right: 15px;
+}
+
+.button {
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    background: #ffffff;
+    margin-right: 7px;
+    border: 0;
+}
+
+.eventShedule td {
+    vertical-align: middle;
+}
+
+.textAftertable {
+    width: 40%;
+    margin: 0 auto;
+    font-family: Roboto-light;
+    color: #242424;
+    font-size: 12px;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.eliteBadge {
+
+    margin-top: 5%;
+    background-image: url(../img/Rectangle%205.png);
+    background-size: 100% 100%;
+    height: 600px;
+}
+
+.envato {
+    float: left;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+
+.envato img {
+    height: 300px;
+}
+
+.headingElites {
+    font-family: Roboto-Black;
+    font-size: 40px;
+    letter-spacing: 2px;
+    float: right;
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.textElites {
+    clear: right;
+    width: 40%;
+    overflow: auto;
+    font-family: Roboto-light;
+    font-size: 14px;
+    float: right;
+    margin-right: 50px;
+    color: white;
+    text-align: right;
+}
+
+.buttonBring {
+    float: right;
+    clear: both;
+    margin-right: 200px;
+    margin-top: 35px;
+}
+
+.buttonBring input {
+    height: 55px;
+    width: 200px;
+    background-color: #90d23d;
+    font-family: Roboto-Regular;
+    color: white;
+    font-size: 18px;
+    border: 0;
+    border-radius: 15px;
+}
+
+#speakers {
+    clear: both;
+    margin-top: 10%;
+    margin-bottom: 4%;
+    margin-left: 15%;
+    font-family: Roboto-light;
+    font-size: 14px;
+    width: 38%;
+}
+
+#speakers p {
+    font-family: Roboto-Black;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.tableHand {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.center {
+    width: 876px;
+
+}
+
+.block1 {
+    float: left;
+    margin: 20px;
+    border: 0px;
+    border-radius: 15px;
+    height: 250px;
+    width: 250px;
+    background-color: #90d23d;
+}
+
+.block2 {
+    float: left;
+    margin: 20px;
+    border: 0px;
+    border-radius: 15px;
+    height: 250px;
+    width: 250px;
+    background-color: #46bc09;
+}
+
+.block2 p {
+    color: #fefefe;
+    width: 160px;
+    font-family: Roboto-light;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 5%;
+}
+
+.block2 p:first-child {
+    color: #fefefe;
+    font-family: Roboto-Black;
+    font-size: 35px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.line {
+    width: 83px;
+    height: 3px;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.pic {
+    display: flex;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+.pic1 {
+    margin: 3px;
+}
+
+.blockimg {
+    margin: 20px;
+    float: left;
+    height: 250px;
+    width: 250px;
+    background-image: url(../img/Vector%20Smart%20Object-4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sponsor {
+    margin-top: 5%;
+    background-image: url(../img/Rectangle%205.png);
+    background-size: 100% 100%;
+    height: auto;
+    width: 100%;
+}
+
+.headingSponsor {
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 80px;
+    text-align: center;
+    font-family: Roboto-Black;
+    color: white;
+    font-size: 40px;
+}
+
+.textSponsor {
+    font-family: Roboto-light;
+    font-size: 14px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.sponsorLogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logoSponsor {
+    margin: 50px;
+}
+
+#pastEvents {
+    font-family: Roboto-Black;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 15%;
+    height:
+}
+
+.textPastEvents {
+    font-family: Roboto-light;
+    color: #242424;
+    font-size: 13px;
+    width: 35%;
+    margin-left: 15%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.colorQuad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.quadBlue {
+    background-color: #3d6ed2;
+    width: 500px;
+    height: 316px;
+    float: left;
+}
+
+.quadGreen {
+    background-color: #90d23d;
+    float: left;
+    width: 470px;
+    height: 316px;
+}
+
+.quadOrange {
+    background-color: #ff9d00;
+    clear: both;
+    float: left;
+    width: 400px;
+    height: 316px;
+}
+
+.quadBrown {
+    float: left;
+    background-color: #e0652a;
+    width: 570px;
+    height: 316px;
+}
+
+#divViewMore {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.buttonViewMore {
+    border-radius: 15px;
+    background-color: #373737;
+    width: 200px;
+    height: 55px;
+    color: white;
+    font-family: Roboto-Regular;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.messages {
+    background-image: url(../img/Map.png);
+    background-size: 100% 120%;
+    height: auto;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    
+}
+
+.formMessages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.imgForm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formMessages p {
+    font-family: Roboto-light;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.buttonViewMap {
+    height: 50px;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+    background-color: #90d23d;
+    border: 0;
+    border-radius: 15px;
+    font-family: Roboto-Regular;
+    color: white;
+    font-size: 22px;
+}
+
+.left {
+    height: 351px;
+    width: 51%;
+    flex: 1;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.right {
+    width: 50%;
+    height: 351px;
+    flex: 1;
+}
+
+.emailInput {
+    margin-top: 45px;
+    margin-left: 4%;
+    margin-bottom: 30px;
+}
+
+.emailForMap {
+    width: 80%;
+    height: 45px;
+    border: 2px solid #90d23d;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+
+.textMessages {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 35px;
+}
+
+.message {
+    width: 78%;
+    height: 100%;
+    margin-left: 4%;
+    margin-bottom: 50px;
+    border: 2px solid #bebebe;
+    border-radius: 5px;
+}
+
+.buttonSend {
+    width: 80%;
+    height: 50px;
+    margin-left: 4%;
+    color: white;
+    background-color: #373737;
+    font-family: Roboto-Regular;
+    font-size: 22px;
+    border: 0;
+    border-radius: 15px;
+}
+
+/* Стили footer'a*/
+
+.footer {
+    width: 100%;
+    height: 220px;
+    flex: 0 0 auto;
+    background-color: #90d23d;
+}
+
+.copyRight {
+    font-family: Roboto-light;
+    font-weight: 300;
+    color: white;
+    width: 27%;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.socialContact {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.socialImg {
+    margin: 5px;
+}
+/* Конец стилей footer*/
+
+
+@media screen and (max-width: 939px) {
+    
+    .textElites {
+        color: black;
+    }
+    
+    .headingElites {
+        margin-top: 10px;
+    }
+    
+}
